@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <title>Basic HTML syntax</title>
+
+    </head><body>
+        <hr><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank">Learn ></a>
+             <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core" target="_blank">Core Learning modules ></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" 
+            target="_blank">HTML</a>
+<hr>
+        <h1>Basic HTML syntax</h1><hr>
+        <u><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content "
+             target="_blank">
+            Overview:Structuring content with HTML</a></u><hr>
+            <p>In this article,we cover the fundamentals 
+                of <abbr title="Hyper Text Markup Language"><b> HTML,</b></abbr>
+                including terminology,<br>
+                syntax, and structure.
+                Along the way, you'll complete some interactive challenges<br> 
+                to became familiar with writing basic <b>HTML.</b> 
+
+            </p>
+            <table border="2"> 
+                <tr >
+                    <th colspan="1"> Prerequisites:</th>
+                    <th colspan="1.5"><u><a href="https://www.youtube.com/watch?v=J-UUJH_3eGg" 
+                        target="_blank">
+                        Basic Software Installed,<br>
+                    </a></u> and basic  knowledge of working with files</th>
+                </tr>
+                <tr>
+                    <td rowspan="20"><h3>Learning <br>outcomes:</h3></td>
+                    <td><ul c >
+                        <li >The Academy of an HTML element-element,<br> 
+                            opening tag, content,closing tag, attributes.</li>
+                            <li>The HTML body and its purpose as a container <br>
+                            for the page content. </li>
+                            <li> What void elements are, and how they<br>
+                                differ from other elements.</li>
+                                <li>The need for a doctype at top of HTML<br>
+                                documents, including its original intended purpose, <br>
+                                and fact that
+                            it is now some what of a historical artifact.</li>
+                            <li> Understanding that HTML needs<br>
+                            to be correctly nested.</li>
+                    </ul></td>
+                </tr>
+            </table>
+            <h2>In this article</h2>
+            <ol type="1">
+                <li><a href="#html">What is HTML</a></li>
+                <li><a href="#html1">Anatomy of an HTML elements</a></li>
+                <li><a href="#html2">Attributes</a></li>
+                <li><a href="#html3">Anatomy of an HTML document</a></li>
+                <li><a href="#html4">Whitespace in HTML</a></li>
+                <li><a href="#html5">Incliding special characters in HTML</a></li>
+                <li><a href="#html6"> HTML comments</a></li>
+            </ol>
+
+
+            <h3 id="html"><u> 1.What is HTML?</u> </h3>
+            <p>HTML (HyperText Markup Language) is a markup language that tells web browsers how to<br> 
+                structure the web pages you visit. HTML consists of a series of elements, <br>
+                which you use to enclose, wrap, or mark up different parts of content to make<br>
+                 it appear or act in a certain way. The enclosing tags can make content into <br>
+                 a hyperlink to link to another page, italicize words, and so on.<br>
+                 For example, consider the following line of text:</p>
+
+<table border="1">
+    <tr>
+        <th>My cat is very grumpy</th>
+        </tr>
+        </table>
+<small>We could specify that this text is a paragraph by<br> enclosing
+ it in paragraph (<strong>< p > </strong>) tags:</small>
+ <table border="1">
+    <tr>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td><strong>< p ></strong>My cat is very grumpy <strong>< p ></strong></td>
+    </tr>
+</table>
+<small>Or, we could specify that this text is a top-level<br>
+     heading by enclosing it in<strong>
+     < h1 > </strong>tags:</small>
+     <table border="1">
+    <tr>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td><strong>< h1 ></strong>My cat is very grumpy <strong>< h1 ></strong></td>
+    </tr>
+    </table>
+<p>
+HTML lives inside text files called HTML documents,<br>
+ or just documents, with a .html file extension.<br>
+  Where previously we've talked about web pages,<br>
+   an HTML document contains the web page's content<br>
+    and specifies its structure.</p>
+    <p>
+
+The most common HTML file you'll encounter is index.html,<br>
+ which is generally used to contain a website's home page content.<br>
+  It's also common to see subfolders containing their own index.html files,<br>
+   so a website can have multiple index files in different places.</p>
+<p><b>
+NOTE:</b> Tags in HTML are not case-sensitive.<br>
+ This means they can be written in uppercase or lowercase.<br>
+  For example, a < title> tag could be written as<b> < title >, < TITLE >, < Title >, < TiTlE >, etc.,</b> <br> 
+    and it will work. However, it is best practice to write all tags<br>
+     in lowercase for consistency and readability.</p>
+
+
+     <h3 id="html1"><u> 2.Anatomy of an HTML elements</u></h3>
+     <p>
+        Let's further explore our paragraph element from the previous section:</p> 
+        <img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax/grumpy-cat-small.png" 
+        alt="image1" width="200" height="100"> <br>
+
+A sample code snippet demonstrating the structure of an html element.<strong>< p ></strong> My cat is very grumpy </p>.
+
+Our complete element consists of:<br>
+<ul>
+
+<li>The opening tag:</li> This consists of the name of the element (in this example,<br>
+ p for paragraph), wrapped in opening and closing angle brackets.<br>
+  This opening tag marks where the element begins or starts to take effect.<br>
+   In this example, it precedes the start of the paragraph text.<br>
+<li>The content:</li> This is the content of the element. In this example,<br>
+ it is the paragraph text — "My cat is very grumpy".
+<li>The closing tag:</li> This is the same as the opening tag, except that it includes<br>
+ a forward slash before the element name. This marks where the element ends.<br>
+  Failing to include a closing tag is a common beginner error<br>
+   that can produce peculiar results.<br>
+<b>Note:</b> Head on over to our learning partner <br>Scrimba's<a href="https://scrimba.com/learn-html-and-css-c0p/~02?via=mdn"
+ target="_blank"> HTML tags MDN learning partner </a>
+scrim for an interactive explanation of HTML tags.
+
+<h4>Creating your first HTML element</h4>
+Let's give you some practice at writing your own HTML elements:<br>
+<ol type="1">
+<li>Click <b>"Play"</b> in the code block below to edit the example <br>
+in the MDN Playground.</li>
+<li>Wrap the line of text with the tags <strong>< em ></strong> and <strong>< /em ></strong>.<br>
+     To open the element, put the opening tag (<strong>< em ></strong>) at the start of the line.<br>
+      To close the element, put the closing tag (<strong>< /em ></strong>) at<br>
+       the end of the line. Doing this should format the rendered text as italic text.</li><br>
+
+<li>If you are feeling adventurous, try researching<br>
+     some <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">
+        more HTML elements</a> and applying them to the text example.<br></li>
+        </ol>
+<p>If you make a mistake, you can clear your work using the Reset<br>
+     button in the MDN Playground. If you get really stuck, you can view <br>
+     the solution below the code block.</p>
+     <table border="1">
+    <tr>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td> This is my text </td>
+    </tr>
+    </table>
+
+
+<h4>Nesting elements</h4>
+Elements can be placed within other elements.<br>
+ This is called nesting. If we wanted to state that<br>
+  our cat is very grumpy, we could wrap the word very <br>in a <strong>< strong ></strong> <br>
+  element, which gives the word strong(er) text formatting:<br>
+   <table border="1">
+    <tr>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td> <strong>< p ></strong> My cat is <strong>< strong ></strong>
+        very <strong>< /strong ></strong>  grumpy.<strong>< /p ></strong></td>
+    </tr>
+    </table><br>
+<p>In this code block, the text "My cat is very grumpy." is <br>
+    all defined as a paragraph. The word "very" is additionally<br>
+     defined as having strong importance.</p>
+
+<p>There is a right and wrong way to do nesting. In the code block above,<br>
+     we open the<strong> < p > </strong> element first, then open the <strong>< strong ></strong><br>
+     element. For proper nesting,we close the <strong>< strong ></strong> <br> 
+     element first, then close the <strong>< p ></strong> </p>.
+
+    </body>
+</html>
