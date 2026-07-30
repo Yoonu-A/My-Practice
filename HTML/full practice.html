@@ -3,17 +3,32 @@
         <title>Basic HTML syntax</title>
 
     </head><body>
-        <hr><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank">Learn ></a>
-             <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core" target="_blank">Core Learning modules ></a>
+        <hr>
+        <a 
+        href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank">
+        Learn >
+
+        </a>
+             <a 
+             href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core" target="_blank">
+                Core Learning modules >
+            </a>
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" 
             target="_blank">HTML</a>
 <hr>
         <h1>Basic HTML syntax</h1><hr>
-        <u><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content "
+        <u>
+            <a 
+            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content "
              target="_blank">
-            Overview:Structuring content with HTML</a></u><hr>
-            <p>In this article,we cover the fundamentals 
-                of <abbr title="Hyper Text Markup Language"><b> HTML,</b></abbr>
+            Overview:Structuring content with HTML</a>
+        </u>
+        <hr>
+            <p>
+                In this article,we cover the fundamentals 
+                of 
+                <abbr title="Hyper Text Markup Language"><b> HTML,</b></abbr>
+
                 including terminology,<br>
                 syntax, and structure.
                 Along the way, you'll complete some interactive challenges<br> 
@@ -31,22 +46,35 @@
                 <tr>
                     <td rowspan="20"><h3>Learning <br>outcomes:</h3></td>
                     <td><ul c >
-                        <li >The Academy of an HTML element-element,<br> 
-                            opening tag, content,closing tag, attributes.</li>
-                            <li>The HTML body and its purpose as a container <br>
-                            for the page content. </li>
-                            <li> What void elements are, and how they<br>
-                                differ from other elements.</li>
-                                <li>The need for a doctype at top of HTML<br>
+                        <li >
+                            The Academy of an HTML element-element,<br> 
+                            opening tag, content,closing tag, attributes.
+                        </li>
+                        <li>
+                            The HTML body and its purpose as a container <br>
+                            for the page content.
+                         </li>
+                         <li>
+                             What void elements are, and how they<br>
+                                differ from other elements.
+                        </li>
+                         <li>
+                            The need for a doctype at top of HTML<br>
                                 documents, including its original intended purpose, <br>
                                 and fact that
-                            it is now some what of a historical artifact.</li>
-                            <li> Understanding that HTML needs<br>
-                            to be correctly nested.</li>
-                    </ul></td>
+                            it is now some what of a historical artifact.
+                        </li>
+                        <li> 
+                            Understanding that HTML needs<br>
+                            to be correctly nested.
+                        </li>
+                    </ul>
+                </td>
                 </tr>
             </table>
+
             <h2>In this article</h2>
+
             <ol type="1">
                 <li><a href="#html">What is HTML</a></li>
                 <li><a href="#html1">Anatomy of an HTML elements</a></li>
@@ -58,13 +86,17 @@
             </ol>
 
 
-            <h3 id="html"><u> 1.What is HTML?</u> </h3>
-            <p>HTML (HyperText Markup Language) is a markup language that tells web browsers how to<br> 
+            <h3 id="html">
+                <u> 1.What is HTML?</u>
+            </h3>
+            <p>
+                HTML (HyperText Markup Language) is a markup language that tells web browsers how to<br> 
                 structure the web pages you visit. HTML consists of a series of elements, <br>
                 which you use to enclose, wrap, or mark up different parts of content to make<br>
                  it appear or act in a certain way. The enclosing tags can make content into <br>
                  a hyperlink to link to another page, italicize words, and so on.<br>
-                 For example, consider the following line of text:</p>
+                 For example, consider the following line of text:
+                </p>
 
 <table border="1">
     <tr>
@@ -104,18 +136,24 @@ The most common HTML file you'll encounter is index.html,<br>
  which is generally used to contain a website's home page content.<br>
   It's also common to see subfolders containing their own index.html files,<br>
    so a website can have multiple index files in different places.</p>
-<p><b>
-NOTE:</b> Tags in HTML are not case-sensitive.<br>
+<p>
+    <table border="1">
+        <tr>
+            <td bgcolor="blue">
+<b>NOTE:</b> Tags in HTML are not case-sensitive.<br>
  This means they can be written in uppercase or lowercase.<br>
   For example, a < title> tag could be written as<b> < title >, < TITLE >, < Title >, < TiTlE >, etc.,</b> <br> 
     and it will work. However, it is best practice to write all tags<br>
      in lowercase for consistency and readability.</p>
+    </td>
+</tr>
+</table>
 
 
      <h3 id="html1"><u> 2.Anatomy of an HTML elements</u></h3>
      <p>
         Let's further explore our paragraph element from the previous section:</p> 
-        <img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax/grumpy-cat-small.png" 
+               <img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax/grumpy-cat-small.png" 
         alt="image1" width="200" height="100"> <br>
 
 A sample code snippet demonstrating the structure of an html element.<strong>< p ></strong> My cat is very grumpy </p>.
@@ -186,6 +224,128 @@ Elements can be placed within other elements.<br>
      we open the<strong> < p > </strong> element first, then open the <strong>< strong ></strong><br>
      element. For proper nesting,we close the <strong>< strong ></strong> <br> 
      element first, then close the <strong>< p ></strong> </p>.
+
+     <p>The following is an example of the wrong way to do nesting:</p>
+     <table border="1">
+    <tr>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td bgcolor="red"> <strong>< p ></strong>My cat is <strong>< strong ></strong>very grumpy.
+        <strong>< /p ></strong><strong>< /strong ></strong> </td>
+    </tr>
+    </table>
+    <p>The<b> tags have to open and close so that they are inside<br>
+         or outside one another.</b> Because the elements overlap <br>
+         in the previous code block, the browser has to guess at your intent.<br>
+          This kind of guessing can result in unexpected results.<br>
+
+</p>
+<h4>Void elements</h4>
+<p>
+    Not all elements follow the pattern of an opening tag,<br>
+     content, then a closing tag. Some elements consist of a single tag,<br>
+      which is typically used to insert/embed something in the document.<br>
+       Such elements are called <a href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element">
+        void elements,
+       </a> elements, which means<br>
+        "elements that cannot contain other HTML content".<br>
+</p>
+<p>For example, the<strong>< br ></strong> element inserts a line break into a line of <br>
+    text, which causes it to break onto multiple lines:<br></p>
+ <table border="1">
+    <tr>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td bgcolor="red"> <strong>< p ></strong> This is a single paragraph,but weare
+            goind <strong>< br ></strong> break it onto two lines. <strong>< /p > </strong>
+        </td>
+    </tr>
+    </table><br>
+
+
+This renders as follows:<br>
+    <table border="1">
+    <tr>
+        <td>This is a single paragraph, but we are going to
+break it onto two lines.</td>
+    </tr></table><br>
+    <table border="1">
+        <tr>
+            <td bgcolor="blue">
+<b>Note:</b> In some HTML examples, you'll see a / added at the end of <br>
+ a void element's tag, for example < br />. This is a different style<br>
+  of markup syntax, which isn't wrong, but this "closing slash" is not needed.<br>
+  </td>
+  </tr>
+  </table>
+
+  <h3 id="html2">3.Attributes </h3>
+  <p>Elements can also have attributes. Attributes look like this:</p>
+  <img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax/grumpy-cat-attribute-small.png"
+  width="400" height="50">
+  <p>
+    Attributes contain extra information about the element that isn't part of its content.<br>
+     The class attribute provides an identifying name that can be used to target <br>
+     the element with styles (CSS) or scripting information (JavaScript).<br>
+  </p>
+  An attribute should have:
+  <ul >
+    <li>A space between it and the element name. When an element has more than one attribute, <br>
+        the attributes should be separated by spaces too.</li>
+<li>The attribute name, followed by an equals sign (=).</li>
+   <li>An attribute value, wrapped with opening and closing quote marks.</li>
+  </ul>
+  <h4> Adding attributes to an element</h4>
+  <p>Now it's your turn again. In this section you are going to explore the <strong> < img > </strong><br>
+     element, which is used to display an image on the page. <br>
+     The <strong> < img > </strong>element can take several attributes, including:</p>
+     <ul>
+        <li>src: A required attribute that specifies the URL (web address)<br>
+             of the image. For example: src="https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png".</li>
+<li>alt: Specifies a text description to describe the image to people who cannot see it. For example:<br>
+     alt="The Firefox Nightly icon". This attribute is not technically required,<br>
+      but you really should provide a text description<br>
+       for all images that convey meaning (as opposed to being purely decorative).</li>
+<li>width: Specifies the width of the image in pixels.<br>
+     For example: width="300".</li>
+<li>height: Specifies the height of the image in pixels.<br>
+     For example: height="300".</li>
+</li>
+     </ul>
+     Follow the steps below to complete the task:
+     <ol type="1">
+        <li>Click "Play" in the code block below to edit<br>
+             the example in the MDN Playground.</li>
+<li>Find your favorite image online, right click it, and press <br>
+    Copy Image Link/Address. Alternatively, copy the image URL above.</li>
+<li>Back in the MDN Playground, add the src attribute to the < img > <br>
+    element and set its value to the URL from Step 2.</li>
+<li>Set the alt attribute to a suitable description of the image.</li>
+<li>Set the width attribute to a value of say 300 so you can see the image <br>
+    a bit better inside the output panel. Adjust the value if needed.</li>
+     </ol>
+     <p>
+        If you make a mistake, you can clear your work using the Reset button in <br>
+        the MDN Playground.
+         If you get really stuck, <br>
+         you can view the solution below the code block.
+     </p>
+     <h4><u>Boolean attributes</u></h4>
+     <p>
+        Sometimes you will see HTML attributes written without values.<br>
+         These are called <a href="https://developer.mozilla.org/en-US/docs/Glossary/Boolean/HTML"> Boolean attributes.</a> <br>
+          When a boolean attribute is added, its value is set to true, irrespective<br>
+           of whatever value is assigned to it (even no value). If an attribute is not ><br>
+           included in an HTML tag, its value is set to false.</p>
+
+<p>For example, consider the disabled attribute, which you can assign to form<br>
+     < input > elements to stop the user entering data into them. For example:
+     </p>
+  
+
+
 
     </body>
 </html>
