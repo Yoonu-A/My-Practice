@@ -343,6 +343,172 @@ break it onto two lines.</td>
 <p>For example, consider the disabled attribute, which you can assign to form<br>
      < input > elements to stop the user entering data into them. For example:
      </p>
+        <table border="1">
+    <tr>
+        <td>HTML</td>
+    
+    
+        <tr>
+            <td>
+< label for="first-input">This input is disabled< /label><br>
+< input id="first-input" type="text" disabled="disabled" />
+< br /><br>
+  </td>
+  </tr>
+  </table>
+  <p>As shorthand, it is acceptable to write the disabled attribute without a value:
+
+</p>
+<table border="1">
+    <tr>
+        <td>HTML</td>
+    
+    
+        <tr>
+            <td>
+< label for="second-input">This input is also disabled< /label><br>
+< input id="second-input" type="text" disabled />
+< br /><br>
+  </td>
+  </tr>
+  </table>
+<p>
+    For reference, let's also provide a non-disabled < input > element<br>
+     so you can compare and contrast (note how the disabled inputs are <br>
+      greyed out in the below rendering):<br>
+</p>
+<table border="1">
+    <tr>
+        <td>HTML</td>
+    
+    
+        <tr>
+            <td>
+< label for="third-input">This input isn't disabled; you can type into it< /label><br>
+< input id="third-input" type="text" /><br>
+  </td>
+  </tr>
+  </table><br>
+  The above HTML snippets render like so:<br>
+  <table border="1">
+    <tr>
+        <td>Rendered output</td>
+    </tr>
+    <tr>
+        <td>
+            <label for="first-input">This input is disabled</label><br>
+            <input id="first-input" type="text" disabled="disabled" /><br><br>
+
+            <label for="second-input">This input is also disabled</label><br>
+            <input id="second-input" type="text" disabled /><br><br>
+
+            <label for="third-input">This input isn't disabled; you can type into it</label><br>
+            <input id="third-input" type="text" /><br><br>
+        </td>
+    </tr>
+  </table>
+<table border="1">
+    <tr>
+        <td bgcolor="blue">
+            <b>NOTE:</b> The <label> elements included in the above code provide a way to associate descriptive labels with form elements. We included them because it is a best practice, and to provide some separation between the form inputs.
+
+
+        </td>
+    </tr>
+  </table>
+  <h4>4. Anatomy of an HTML document</h4>
+  <p>Individual HTML elements aren't very useful on their own. Next, <br>
+    let's examine how individual elements combine to form an entire HTML page.<br>
+
+The following example is a very simple complete webpage:<br>
+<table border="1">
+    <tr>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td bgcolor="red">
+            <strong>< !DOCTYPE html ></strong><br>
+            <strong>< html ></strong><br>
+            <strong>< head ></strong><br>
+            < strong>< title ></strong>My first HTML page<strong>< /title ></strong><br>
+            < strong>< /head ></strong><br>
+            < strong>< body ></strong><br>
+            < h1 >Hello world!< /h1 ><br>
+            < p >This is my first HTML page.< /p ><br>
+            < strong>< /body ></strong><br>
+            < strong>< /html ></strong>
+
+        </td>
+    </tr>
+    </table>
+</table>
+<p>
+    <!doctype html>: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
+
+html
+
+Copy
+< !doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><br>
+    The doctype was meant to be a reference to a Document Type Definition (DTD),<br>
+     which is a set of rules for the markup language. The DTD would define what <br>
+     elements and attributes were available, and how they could be used. However,<br>
+      in modern times, the doctype is a historical artifact that needs to be included<br>
+       for everything else to work correctly. < !doctype html > is the shortest string<br>
+        of characters that counts as a valid doctype, and it should be included at <br>
+        the top of all webpages. That is all you need to know!<br>
+
+In modern times, the doctype is a historical artifact <br>
+that needs to be included for everything else to work correctly.</p><br>
+ <p><! doctype html> is the shortest string of characters that counts<br>
+  as a valid doctype, and it should be included at the top of all webpages.<br>
+   That is all you need to know!
+
+< html>< /html>: The < html> element. This element wraps all the content on the page.<br>
+ It is sometimes known as the root element.<br>
+
+< head>< /head>: The < head> element. This element acts as a container for <br>
+information about the page that isn't part of the content that users will see.<br>
+ This can include keywords and a page description to be shown in search results,<br>
+  CSS to style content, character set declarations, and more. You will learn more<br>
+   about the head of the page in the next article.<br></p>
+
+< meta charset="utf-8">: A < meta> element. This element represents metadata that describes the page. The charset attribute specifies the character encoding your document will use. UTF-8 includes most characters from the vast majority of human written languages, which means the page will be able to display different languages successfully. There is no reason not to set this, and it can help avoid some problems later.
+
+< title>< /title>: The < title> element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
+
+< body>< /body>: The < body> element. This contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, and so on.
+
+Adding some features to an HTML document
+At this point, we want you to practice writing some slightly more substantial HTML content. To do this, you've got a couple of options — you can create the HTML on your local computer, or use the MDN Playground like in the previous examples.
+
+<p>Example setup<br>
+To do it on your local machine:<br>
+Copy the HTML page example listed in the previous section and paste it into<br>
+ a new file in your code editor. You can also find this basic HTML template on our<br>
+  GitHub repo.
+Make the changes to the page outlined in the instructions.<br>
+Save the file as index.html then load it in a new browser tab to see the results.
+To do it in the MDN Playground, click "Play" in the output panel below to<br>
+ edit the example, then follow the instructions. If you make a mistake, <br>
+ you can clear your work using the Reset button in the MDN Playground.
+Play</p>
+
+Example instructions
+Here are the instructions to follow:
+
+<p>Just below the opening tag of the < body> element, add a main title for the document.<br>
+     This should be wrapped by < h1>< /h1> opening and closing tags.<br>
+Edit the paragraph content to include text about a topic that you find interesting.<br>
+Make important words stand out in bold by wrapping them inside a < strong> element.<br>
+Add two links to your paragraph. This is achieved using the < a> element.<br>
+     The href attribute specifies the URL of the page the link goes to.<br>
+      The target attribute specifies where to open the linked document.<br>
+       For example, target="_blank" opens the linked document in a new window or tab.<br>
+        You can also add a title attribute to your links, which will display<br>
+         additional information when the user hovers over the link.<br>
+Add an image to your document below the paragraph as explained earlier. If it is too big to see, add a width attribute to shrink it down.
+If you get really stuck, you can view a potential solution here:
+</p>
   
 
 

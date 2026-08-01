@@ -4,16 +4,44 @@
     </head>
     <body>
         <h1><center><u>Student Form</u></center></h1>
-        <form method="get" action="" align="center">
-            <p> Name:<input type="text" name="name" placeholder="Enter Your Full Name" size="40"> </p>
+        <form method="get" action="" >
+            <fieldset>
+                <legend><h3>Login Information</h3></legend>
+            <p> <label for="name">Name:</label><input type="text" name="name" placeholder="Enter Your Full Name" size="40" id="name"> </p>
 
-            <p> Email:
-                <input type="email" size="40" placeholder="Enter Your Email Address">
+            <p> <label for="email">Email:</label>
+                <input type="email" size="40" placeholder="Enter Your Email Address" id="email">
+            </fieldset>
+            <fieldset>
+                <legend><h3>Personal Information</h3></legend>
             </p>
-            <p> Address:<textarea placeholder="Address" cols="38" rows="5"></textarea> </p>
-            <p> Gender:<input type="radio" name="gender" placeholder="Gender" value="Male" checked="checked">Male
-            <input type="radio" name="gender" placeholder="Gender" value="Male" checked="checked">Female
+            
+            <p> <label for="gender">Gender:</label><br>
+                <input type="radio" name="gender" placeholder="Gender" value="Male" checked="checked" id="male"><label for="male">Male</label>
+                <input type="radio" name="gender" placeholder="Gender" value="Female" id="female"><label for="female">Female</label>
             </p>
+            <p> <label for="date">Date of Birth:</label><br>
+                <input type="date" name="date" placeholder="Date of Birth" id="date">
+                <p> <label for="address">Address:<br></label><textarea placeholder="Address" cols="38" rows="5" id="address"></textarea> </p>
+            </p>
+            </fieldset>
+            <fieldset>
+                <legend><h3>Educational Information</h3></legend>
+            
+            <p> <label for="courses">Courses:</label><br>
+                <input type="checkbox" name="Web Development" value="Web Development" id="Web Development"><label for="Web Development">Web Development</label>
+                <input type="checkbox" name="Network Engineering" value="Network Engineering" id="Network Engineering"><label for="Network Engineering">Network Engineering</label>
+                <input type="checkbox" name="AI" value="AI" id="AI"><label for="AI">AI</label>
+                <input type="checkbox" name="Cyber Security" value="Cyber Security" id="Cyber Security"><label for="Cyber Security">Cyber Security</label>
+            </p>
+            
+            
+            </p>
+            <p> <label>Certificate:</label><br>
+                <input type="file" name="Certificate" placeholder="Upload Your Certificate">
+            </p>
+            </fieldset>
+            <p><input type="submit" value="Submit"></p>
 
         </form>
     </body>
