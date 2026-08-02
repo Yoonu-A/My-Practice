@@ -139,7 +139,7 @@ The most common HTML file you'll encounter is index.html,<br>
 <p>
     <table border="1">
         <tr>
-            <td bgcolor="blue">
+            <td bgcolor="white">
 <b>NOTE:</b> Tags in HTML are not case-sensitive.<br>
  This means they can be written in uppercase or lowercase.<br>
   For example, a < title> tag could be written as<b> < title >, < TITLE >, < Title >, < TiTlE >, etc.,</b> <br> 
@@ -148,6 +148,7 @@ The most common HTML file you'll encounter is index.html,<br>
     </td>
 </tr>
 </table>
+<a href="#top">Back to top</a>
 
 
      <h3 id="html1"><u> 2.Anatomy of an HTML elements</u></h3>
@@ -273,15 +274,16 @@ break it onto two lines.</td>
     </tr></table><br>
     <table border="1">
         <tr>
-            <td bgcolor="blue">
+            <td bgcolor="white">
 <b>Note:</b> In some HTML examples, you'll see a / added at the end of <br>
  a void element's tag, for example < br />. This is a different style<br>
   of markup syntax, which isn't wrong, but this "closing slash" is not needed.<br>
   </td>
   </tr>
   </table>
+  <a href="#top">Back to top</a>
 
-  <h3 id="html2">3.Attributes </h3>
+  <h2 id="html2"><u>3. Attributes</u></h2>
   <p>Elements can also have attributes. Attributes look like this:</p>
   <img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax/grumpy-cat-attribute-small.png"
   width="400" height="50">
@@ -409,14 +411,20 @@ break it onto two lines.</td>
   </table>
 <table border="1">
     <tr>
-        <td bgcolor="blue">
-            <b>NOTE:</b> The <label> elements included in the above code provide a way to associate descriptive labels with form elements. We included them because it is a best practice, and to provide some separation between the form inputs.
+        <td bgcolor="white">
+            <b>NOTE:</b> The <label> elements included in the above code provide<br>
+                 a way to associate descriptive labels with form elements.<br>
+                  We included them because it is a best practice, and to provide <br>
+                  some separation between the form inputs.
 
 
         </td>
     </tr>
   </table>
-  <h4>4. Anatomy of an HTML document</h4>
+  <a href="#top">Back to top</a>
+
+
+  <h2 id="html3"><u>4. Anatomy of an HTML document</u></h2>
   <p>Individual HTML elements aren't very useful on their own. Next, <br>
     let's examine how individual elements combine to form an entire HTML page.<br>
 
@@ -426,90 +434,286 @@ The following example is a very simple complete webpage:<br>
         <td>HTML</td>
     </tr>
     <tr>
-        <td bgcolor="red">
+        <td >
             <strong>< !DOCTYPE html ></strong><br>
             <strong>< html ></strong><br>
             <strong>< head ></strong><br>
-            < strong>< title ></strong>My first HTML page<strong>< /title ></strong><br>
-            < strong>< /head ></strong><br>
-            < strong>< body ></strong><br>
+            <strong>< title ></strong>My first HTML page<strong>< /title ></strong><br>
+            <strong>< /head ></strong><br>
+            <strong>< body ></strong><br>
             < h1 >Hello world!< /h1 ><br>
             < p >This is my first HTML page.< /p ><br>
-            < strong>< /body ></strong><br>
-            < strong>< /html ></strong>
+            <strong>< /body ></strong><br>
+            <strong>< /html ></strong>
 
         </td>
     </tr>
     </table>
 </table>
 <p>
-    <!doctype html>: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
-
-html
-
-Copy
-< !doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><br>
-    The doctype was meant to be a reference to a Document Type Definition (DTD),<br>
-     which is a set of rules for the markup language. The DTD would define what <br>
-     elements and attributes were available, and how they could be used. However,<br>
-      in modern times, the doctype is a historical artifact that needs to be included<br>
-       for everything else to work correctly. < !doctype html > is the shortest string<br>
-        of characters that counts as a valid doctype, and it should be included at <br>
-        the top of all webpages. That is all you need to know!<br>
-
-In modern times, the doctype is a historical artifact <br>
-that needs to be included for everything else to work correctly.</p><br>
- <p><! doctype html> is the shortest string of characters that counts<br>
-  as a valid doctype, and it should be included at the top of all webpages.<br>
-   That is all you need to know!
-
-< html>< /html>: The < html> element. This element wraps all the content on the page.<br>
- It is sometimes known as the root element.<br>
-
-< head>< /head>: The < head> element. This element acts as a container for <br>
-information about the page that isn't part of the content that users will see.<br>
- This can include keywords and a page description to be shown in search results,<br>
-  CSS to style content, character set declarations, and more. You will learn more<br>
-   about the head of the page in the next article.<br></p>
-
-< meta charset="utf-8">: A < meta> element. This element represents metadata that describes the page. The charset attribute specifies the character encoding your document will use. UTF-8 includes most characters from the vast majority of human written languages, which means the page will be able to display different languages successfully. There is no reason not to set this, and it can help avoid some problems later.
-
-< title>< /title>: The < title> element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
-
-< body>< /body>: The < body> element. This contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, and so on.
-
-Adding some features to an HTML document
-At this point, we want you to practice writing some slightly more substantial HTML content. To do this, you've got a couple of options — you can create the HTML on your local computer, or use the MDN Playground like in the previous examples.
-
-<p>Example setup<br>
-To do it on your local machine:<br>
-Copy the HTML page example listed in the previous section and paste it into<br>
- a new file in your code editor. You can also find this basic HTML template on our<br>
-  GitHub repo.
-Make the changes to the page outlined in the instructions.<br>
-Save the file as index.html then load it in a new browser tab to see the results.
-To do it in the MDN Playground, click "Play" in the output panel below to<br>
- edit the example, then follow the instructions. If you make a mistake, <br>
- you can clear your work using the Reset button in the MDN Playground.
-Play</p>
-
-Example instructions
-Here are the instructions to follow:
-
-<p>Just below the opening tag of the < body> element, add a main title for the document.<br>
-     This should be wrapped by < h1>< /h1> opening and closing tags.<br>
-Edit the paragraph content to include text about a topic that you find interesting.<br>
-Make important words stand out in bold by wrapping them inside a < strong> element.<br>
-Add two links to your paragraph. This is achieved using the < a> element.<br>
-     The href attribute specifies the URL of the page the link goes to.<br>
-      The target attribute specifies where to open the linked document.<br>
-       For example, target="_blank" opens the linked document in a new window or tab.<br>
-        You can also add a title attribute to your links, which will display<br>
-         additional information when the user hovers over the link.<br>
-Add an image to your document below the paragraph as explained earlier. If it is too big to see, add a width attribute to shrink it down.
-If you get really stuck, you can view a potential solution here:
+    The Parts of an HTML document are as follows:
+    <ol>
+        <li><strong>&lt;!DOCTYPE html&gt;</strong>:The doctype. When HTML was young (1991-1992),<br>
+             doctypes were meant to act as links to a set of rules that the HTML page<br>
+              had to follow to be considered good HTML.<br>
+             Doctypes used to look something like this: 
+            <table border="1">
+    <tr>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td>
+            
+            <strong>< !DOCTYPE html PUBLIC <br>
+                "-//W3C//DTD XHTML 1.0 Transitional//EN"<br>
+                 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" ></strong>
+        </td>
+    </tr>
+    </table>
+    <p>
+        In modern times, the doctype is a historical artifact <br>
+        that needs to be included for everything else to work correctly. <br> 
+         < !doctype html> is the shortest string of characters that counts<br>
+          as a valid doctype, and it should be included at the top of all webpages.<br>
+          That is all you need to know!
+    </p>
+            </li>
+        <li><strong>&lt;html&gt;</strong>: 
+        <p>
+            The root element of an HTML page. It is the container for<br>
+             all other HTML elements (except for the doctype).<br>
+             The opening < html > tag should be the first thing after the doctype, <br>
+             and the closing < /html > tag should be the last thing in the document.
+        </p></li>
+        <li><strong>&lt;head&gt;</strong>:
+        <p>
+            The head element is a container for metadata (data about data) and is placed<br>
+             between the < html > tag and the < body > tag. Metadata typically define the<br>
+              document title, character set, styles, scripts, and other meta information.<br>
+               The metadata is not displayed.
+        </p></li>
+        <li><strong>&lt;title&gt;</strong>: 
+        <p>
+            The title element specifies a title for the document. <br>
+             The title is shown in the browser's title bar or in the page's tab.<br>
+              It is also used when bookmarking a page.
+        </p></li>
+        <li><strong>&lt;body&gt;</strong>: 
+        <P>
+            The body element contains the visible page content, such as headings, <br>
+             paragraphs, images, hyperlinks, tables, lists, etc.
+        </P></li>
+    </ol>
 </p>
-  
+<h4>Adding some features to an HTML document</h4>
+<p>
+    At this point, we want you to practice writing some slightly more <br>
+    substantial HTML content. To do this, you've got a couple of<br>
+     options — you can create the HTML on your local computer,<br>
+      or use the MDN Playground like in the previous examples
+</p>
+Example setup
+<ul>
+    <li> To do it on your local machine:
+        <ol type="1">
+
+            <li>Copy the HTML page example listed in the previous section <br>
+                and paste it into a new file in your code editor. You can also<br>
+                 find this <a href="https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html" target="_blank"><br>
+                    basic HTML template</a> on our GitHub repo.</li>
+<li>Make the changes to the page outlined in the instructions.</li>
+            <li>Save the file as index.html then load it in a new browser <br>
+                tab to see the results.</li>
+
+        </ol>
+    </li>
+    <li>
+        To do it in the MDN Playground, click "Play" in the output panel <br>
+        below to edit the example, then follow the instructions. If you make <br>
+        a mistake, you can clear your work using the Reset button in <br>
+        the MDN Playground.
+    </li>
+</ul>
+Example instructions<br>
+Here are the instructions to follows:
+<ol type="1">
+    <li>
+        Just below the opening tag of the < body > element, add a main title for the document.<br>
+             This should be wrapped by < h1 >< /h1 > opening and closing tags.
+    </li>
+    <li>
+        Edit the paragraph content to include text about a topic that you find interesting.
+    </li>
+    <li>
+        Make important words stand out in bold by wrapping them inside a < strong > element.
+    </li>
+    <li>
+        Add two links to your paragraph. This is achieved using the < a > element.
+    </li>
+    <li>
+        Add an image to your document below the paragraph as explained earlier.<br>
+         If it is too big to see, add a width attribute to shrink it down.
+    </li>
+    </ol>
+    <a href="#top">Back to top</a>
+
+
+    <h2 id="html4"><u>5. Whitespace in HTML</u></h2>
+    <p>
+        In previous examples, we've included lot of whitespace in the code.<br>
+         In most cases this is completely optional, and included mainly <br>
+         to make the code more readable. For example,<br>
+         these two code snippets are equivalent:
+    </p>
+    <table>
+        <tr>
+            <td>
+                HTML
+            </td>
+        </tr>
+        <tr>
+            <td>
+                < p id="noWhitespace">Dogs are silly.< /p>
+
+< p id="whitespace">Dogs
+    are
+        silly.< /p>
+            </td>
+        </tr>
+    </table><br>
+     They both render exactly the same, like so:
+    <table>
+        <tr>Dogs are silly.</tr>
+
+          <tr>Dogs are silly.</tr>
+
+    <p>
+        In almost all elements (there are exceptions such as < pre >), <br>
+        no matter how much whitespace you use inside HTML element content,<br>
+         the HTML parser reduces each sequence of whitespace to a single space<br>
+          when rendering the code.
+
+    </p>
+    <p>
+        It is up to you to choose a preferred code formatting style. <br>
+        It is common to give each nested element two spaces of indentation <br>
+        more than the one it is sitting inside; this is the style we use on MDN.
+    </p>
+    For example:
+    <table>
+        <tr>
+            <td>
+                HTML
+            </td>
+        </tr>
+        <tr>
+            <td>
+                < section ><br>
+
+            < div ><br>
+                < p >Dogs are silly.< /p><br>
+                < /div ><br>
+                < /section ><br>
+            </td>
+</tr>
+</table>
+<a href="#top">Back to top</a>
+
+
+<h2 id="html5"><u>6.Character references: <br>including special
+    characters in HTML</u></h2>
+    <p>
+        In HTML, the characters <, >, ", ', and & are special characters. <br>
+        They are parts of the HTML syntax itself. So how do you include these <br>
+        special characters in your text? For example, how can you use a literal<br>
+         ampersand or less-than sign in your content without it being interpreted as code?
+    </p>
+    <p>
+        You do this with <a href="https://developer.mozilla.org/en-US/docs/Glossary/Character_reference" target="_blank">
+            character references</a>. These are special codes that represent characters,<br>
+             to be used in these exact circumstances. Each character reference starts with an <br>
+             ampersand (&), and ends with a semicolon (;).
+    </p>
+<table border="1">
+    <tr >
+        <th colspan="1">Literal character</th>
+        <th colspan="2">Character reference equivalent</th>
+    </tr>
+    <tr>
+        <td><</td>
+        <td>&amp;lt;</td>
+        <td>less-than sign</td>
+    </tr>
+    <tr>
+        <td>></td>
+        <td>&amp;gt;</td>
+        <td>greater-than sign</td>
+    </tr>
+    <tr>
+        <td>"</td>
+        <td>&amp;quot;</td>
+        <td>double quotation mark</td>
+    </tr>
+    <tr>
+        <td>'</td>
+        <td>&amp;apos;</td>
+        <td>apostrophe or single quotation mark</td>
+    </tr>
+    <tr>
+        <td>&</td>
+        <td>&amp;amp;</td>
+        <td>ampersand</td>
+    </tr>
+</table><br>
+<p>
+    Character references are fairly easily remembered because the text <br>
+    they use is an abbreviation of the character name — for example<br>
+     "lt" = "less than", "quot" = "quotation", and "amp" = "ampersand".<br>
+      To learn more about entity references, see<a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" target="_blank"> <br>
+        List of XML and HTML character entity references (Wikipedia)</a>.
+</p>
+<table border="1">
+    <tr>
+        <td bgcolor="white">
+            <b>NOTE:</b> You don't need to use entity references for any other symbols,<br>
+             as modern browsers will handle the actual symbols just fine as long as your HTML's <br>
+             <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#specifying_your_documents_character_encoding" target="_blank">character encoding is set to UTF-8.</a>
+        </td>
+        </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <h2 id="html6"><u>7. HTML comments</u></h2>
+        <p>
+            HTML has a mechanism to write comments in the code. Browsers ignore comments,<br>
+             therefore they are invisible to the user. The purpose of comments<br>
+              is to allow you to include notes in the code to explain how it works. <br>
+              This is very useful if you return to a code base after being away for <br>
+              long enough that you don't remember it, or if someone else starts working on it that has never seen it before.
+        </p>
+ To write an HTML comment, wrap it in the special markers <!-- and -->, as shown below:
+ <table border="1">
+    <tr>
+        <td>HTML</td>
+     </tr>
+     <tr>
+        <td>
+            < p > I'm not inside a comment < /p >
+        </td>
+     </tr>
+
+     </table>
+     <small>In the above example, the text "I'm inside a comment" is ignored by the browser, <br>
+        and will not be displayed on the page. The text "I'm not inside a comment"<br>
+         is not inside the comment markers, so it will be displayed on the page.</small>
+         <p>
+            <b>NOTE:</b> Comments can be placed anywhere in the code, and can span multiple lines.<br>
+             However, comments cannot be nested. This means that you cannot place a comment<br>
+              inside another comment. If you try to do this, it will not work as expected.
+         </p>
+         <a href="#top">Back to top</a>
+
+
+
 
 
 
