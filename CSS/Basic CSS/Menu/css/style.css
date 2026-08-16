@@ -1,0 +1,29 @@
+ul
+{
+    list-style-type: none;
+    background-color: #5dd6f1;
+    margin-left: 1000px;
+    overflow: hidden;
+    width: 25%;
+    
+    
+}
+ul li
+{
+    float: left;
+    padding: 10px;  
+}
+
+ul li:hover
+{
+    background-color: black;
+}
+ul li a:hover
+{
+   color: aliceblue;
+}
+ul li a
+{
+text-decoration: none;
+
+}
