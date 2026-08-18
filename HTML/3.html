@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        body { color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        a { text-decoration: none; color: #0076d6; }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; background: #ffffff; display: flex; justify-content: space-between; padding: 1rem 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+        .logo { font-weight: bold; font-size: 1.2rem; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 20px; }
+
+        /* Hero Section */
+        header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #e0f2fe 0%, #0076d6 100%); color: white; padding: 0 20px; }
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        .btn { background: white; color: #0076d6; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
+
+        /* Sections General */
+        section { padding: 80px 10%; }
+        section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        section h2::after { content: ''; display: block; width: 50px; height: 3px; background: #0076d6; margin: 10px auto 0 auto; }
+
+        /* About & Project Grid */
+        .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .project-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+        /* Contact Section */
+        .contact-form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+        .contact-form button { background: #0076d6; color: white; padding: 12px; border: none; border-radius: 4px; cursor: pointer; }
+
+        /* Footer */
+        footer { background: #222; color: white; text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">MyBrand</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#practice7.html" target="_blank">Projects</a></li>
+            <li><a href="#contact.html" target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+    <header id="home">
+        <h1>Hi, I'm [Yoonu]</h1>
+        <p>A Passionate Web Developer</p>
+        <a href="#practice7.html" class="btn">View My Work</a>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>Write a brief summary introduction about yourself here. Highlight your key competencies, technologies you prefer working with, and your current occupational focus or professional goals.</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project Title</h3>
+                <p>A short description detailing the problem this application solves, the tech stack utilized, and your main contributions.</p>
+                <a href="#" target="_blank">View Live Demo &rarr;</a>
+            </div>
+            <!-- Duplicate card for more projects -->
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <form class="contact-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2026 Your Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
