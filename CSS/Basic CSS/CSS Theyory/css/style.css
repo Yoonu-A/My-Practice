@@ -1,29 +1,23 @@
-h2
+.border
 {
-   text-align: center;
+   /* width: 50%;
+   border-top-width:5px ;
+   border-bottom-width:10px ;
+   border-right-width: 15px;
+   border-left-width: 20px;
+
+   border-top-style: dashed ;
+   border-bottom-style:dotted;
+   border-left-style:solid ;
+   border-right-style: double;
+   
+   border-top-color: red;
+   border-bottom-color: rgb(236, 217, 217);
+   border-left-color: rgb(114, 85, 85);
+   border-right-color: rgb(161, 104, 104);*/
+   
+   border-width: 5px 10px 15px 20px;
+   border-color: aqua black red blue;
+   border-style: dashed dotted solid double;
 }
-.left
-{
-       text-shadow: 2px 2px 2px yellowgreen;
-}
-.right
-{
-       text-shadow: 2px 2px 2px yellowgreen;
-}
-.top
-{
-       text-shadow: 2px 2px 2px yellowgreen;
-}
-.bottom
-{
-       text-shadow: 2px 2px 2px yellowgreen;
-}
-.blur
-{
-        text-shadow: 2px 2px 2px yellowgreen;
-}
-.combine
-{
-    text-shadow: 2px 2px 2px yellowgreen;
-    
-}
+
