@@ -1,0 +1,21 @@
+a:link
+{
+    color: aqua;
+}
+a:visited
+{
+    color: black;
+}
+a:hover
+{
+    color: bisque;
+    font-size: small;
+}
+a:focus
+{
+    color: aquamarine;
+}
+a:active
+{
+    color: black;
+}
