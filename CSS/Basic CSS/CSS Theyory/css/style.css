@@ -1,21 +1,29 @@
-a:link
+h2
 {
-    color: aqua;
+   text-align: center;
 }
-a:visited
+.left
 {
-    color: black;
+       text-shadow: 2px 2px 2px yellowgreen;
 }
-a:hover
+.right
 {
-    color: bisque;
-    font-size: small;
+       text-shadow: 2px 2px 2px yellowgreen;
 }
-a:focus
+.top
 {
-    color: aquamarine;
+       text-shadow: 2px 2px 2px yellowgreen;
 }
-a:active
+.bottom
 {
-    color: black;
+       text-shadow: 2px 2px 2px yellowgreen;
+}
+.blur
+{
+        text-shadow: 2px 2px 2px yellowgreen;
+}
+.combine
+{
+    text-shadow: 2px 2px 2px yellowgreen;
+    
 }
