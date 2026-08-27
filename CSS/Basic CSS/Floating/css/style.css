@@ -2,3 +2,10 @@ div
 {
     border: 2px solid red;
 }
+img
+{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
