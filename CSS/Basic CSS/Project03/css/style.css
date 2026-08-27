@@ -1,0 +1,219 @@
+ div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050817;
+    color: white;
+}
+
+
+/* Header */
+
+header {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 5%;
+    background: #030712;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: bold;
+    color: #20d9ff;
+}
+
+.logo span {
+    color: #ff4b43;
+}
+
+.logo small {
+    display: block;
+    font-size: 11px;
+    color: #ff5750;
+    margin-top: 5px;
+}
+
+.menu {
+    font-size: 55px;
+    cursor: pointer;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 1200px;
+    text-align: center;
+    padding: 60px 5%;
+
+    background:
+        radial-gradient(circle, #17104b, #070718 60%, #03040c);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #16d9ff;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.hero h2 span {
+    color: #e84b8b;
+}
+
+
+/* Statistics */
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 900px;
+    margin: 80px auto;
+}
+
+.box {
+    width: 30%;
+    padding: 45px 20px;
+    border: 2px solid #123d62;
+    border-radius: 20px;
+    background: rgba(10, 5, 30, 0.8);
+}
+
+.box strong {
+    font-size: 42px;
+}
+
+.box strong span {
+    color: #ff4c43;
+}
+
+.box p {
+    margin-top: 25px;
+    color: #aaa9c2;
+}
+
+
+/* Brain */
+
+.brain {
+    font-size: 180px;
+    margin: 50px auto;
+    filter: drop-shadow(0 0 30px #00eaff);
+}
+
+
+/* Code */
+
+.code-box {
+    position: absolute;
+    right: 7%;
+    bottom: 100px;
+
+    width: 330px;
+    padding: 25px;
+
+    text-align: left;
+
+    border: 2px solid #123d62;
+    border-radius: 20px;
+
+    background: #08091b;
+}
+
+.code-box p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.code-box code {
+    color: #00d9ff;
+    line-height: 1.6;
+}
+
+
+/* Bottom */
+
+.bottom {
+    padding: 45px;
+    text-align: center;
+    background: #09051b;
+}
+
+.bottom h2 {
+    font-size: 42px;
+}
+
+.bottom span {
+    color: #ff5147;
+}
+
+.bottom h2 {
+    color: #16d9ff;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    header {
+        height: 140px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .menu {
+        font-size: 40px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .brain {
+        font-size: 120px;
+    }
+
+    .code-box {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 50px auto;
+        width: 90%;
+    }
+
+    .bottom h2 {
+        font-size: 28px;
+    }
+}
