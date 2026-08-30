@@ -1,0 +1,43 @@
+table
+{
+    border: 3px solid rgb(1, 15, 22);
+    width: 85%;
+    border-spacing: 5px;
+   
+}
+th,td{
+    border:2px solid rgb(24, 1, 24) ;
+     padding: 10px;
+     font-style: italic;
+     font-display: auto;
+}
+.clr1
+{
+    background-color: rgb(250, 175, 150);
+}
+.clr2
+{
+    background-color: palevioletred;
+}
+
+.day
+{
+    text-align: center;
+    background-color: azure;
+}
+.o
+{
+    background-color: moccasin;
+}
+.n
+{
+    background-color: moccasin;
+}
+.e
+{
+    background-color: moccasin;
+}
+th
+{
+    background-color: beige;
+}
