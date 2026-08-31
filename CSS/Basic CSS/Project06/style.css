@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #070511;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: #08080d;
+    border-bottom: 1px solid #242133;
+}
+
+.logo {
+    width: 50%;
+    height: 250px;
+}
+
+.logo span {
+    color: #20e4df;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #20e4df;
+}
+
+.login {
+    background: #ff3b35;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 14px 22px;
+
+    font-weight: bold;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: calc(100vh - 75px);
+    min-height: 650px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #17244b 0%,
+            #0d1230 30%,
+            #080517 70%
+        );
+}
+
+
+/* Background Lines */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 49.8%,
+            #172957 50%,
+            transparent 50.2%
+        );
+
+    opacity: 0.5;
+}
+
+
+/* ================= MAIN TITLE ================= */
+
+.main-content {
+    position: absolute;
+
+    top: 24%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    width: 650px;
+
+    z-index: 5;
+}
+
+.main-content h1 {
+    font-size: 38px;
+    letter-spacing: 3px;
+}
+
+.main-content h1 span {
+    color: #20e5df;
+}
+
+.main-content h2 {
+    font-size: 32px;
+    margin-top: 8px;
+    letter-spacing: 3px;
+}
+
+.main-content h2 b {
+    color: #ff4057;
+}
+
+
+
+
+/* ================= BRAIN ================= */
+
+/*.brain {
+    width: 330px;
+    height: 330px;
+
+    margin: 35px auto;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle,
+            #16234a,
+            #09112c 65%,
+            transparent 70%
+        );
+
+    box-shadow:
+        0 0 25px #18ddd9,
+        inset 0 0 40px #162f63;
+}
+
+
+/* Brain Left */
+
+/*.brain-left {
+    position: absolute;
+
+    width: 135px;
+    height: 210px;
+
+    left: 30px;
+    top: 60px;
+
+    border: 7px solid #1fe4de;
+
+    border-radius: 50% 45% 50% 45%;
+
+    transform: rotate(-8deg);
+
+    box-shadow: 0 0 12px #1fe4de;
+}
+
+
+/* Brain Right */
+
+/*.brain-right {
+    position: absolute;
+
+    width: 135px;
+    height: 210px;
+
+    right: 30px;
+    top: 60px;
+
+    border: 7px solid #ff405d;
+
+    border-radius: 45% 50% 45% 50%;
+
+    transform: rotate(8deg);
+
+    box-shadow: 0 0 12px #ff405d;
+}
+
+
+/* Middle Line */
+
+/*.brain-line {
+    position: absolute;
+
+    width: 3px;
+    height: 250px;
+
+    left: 50%;
+    top: 40px;
+
+    background: white;
+
+    opacity: 0.6;
+}
+
+
+/* ================= STATISTICS ================= */
+
+.stat {
+    position: absolute;
+
+    padding: 18px 25px;
+
+    text-align: center;
+
+    border: 1px solid #24315a;
+    border-radius: 10px;
+
+    background: rgba(8, 8, 28, 0.7);
+
+    z-index: 6;
+}
+
+.stat h2 {
+    font-size: 30px;
+}
+
+.stat h2 span {
+    color: #ff3d50;
+}
+
+.stat p {
+    color: #777;
+
+    font-size: 10px;
+
+    margin-top: 7px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Positions */
+
+.stat1 {
+    top: 16%;
+    left: 72%;
+}
+
+.stat2 {
+    top: 16%;
+    left: 18%;
+}
+
+.stat3 {
+    bottom: 14%;
+    left: 18%;
+}
+
+
+/* ================= CODE BOX ================= */
+
+.code-box {
+    position: absolute;
+
+    bottom: 10%;
+    left: 72%;
+
+    width: 260px;
+
+    padding: 20px;
+
+    border: 1px solid #26325c;
+    border-radius: 10px;
+
+    background: rgba(7, 8, 27, 0.85);
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    z-index: 7;
+}
+
+.code-box p {
+    margin: 2px 0;
+}
+
+.pink {
+    color: #ff579e;
+}
+
+.red {
+    color: #ff4050;
+}
+
+.cyan {
+    color: #20e5df;
+}
+
+.yellow {
+    color: #ffe45c;
+}
+
+.blue {
+    color: #5d9eff;
+}
+
+
+/* ================= ICONS ================= */
+
+.tech-icon {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #29345c;
+
+    border-radius: 10px;
+
+    background: #0c0c26;
+
+    font-size: 20px;
+
+    z-index: 7;
+}
+
+.icon1 {
+    top: 10%;
+    left: 48%;
+
+    color: #ff4355;
+}
+
+.icon2 {
+    bottom: 48%;
+    left: 25%;
+
+    color: #438fff;
+}
+
+.icon3 {
+    top: 45%;
+    right: 25%;
+
+    color: #20e5df;
+}
+
+.icon4 {
+    bottom: 10%;
+    right: 48%;
+
+    color: #ffdc42;
+}
+.icon5 
+{
+    top: 55%;
+    left: 48%;
+    border-radius: 5px;
+}
+
+
+
