@@ -38,13 +38,14 @@ body {
 
 .menu {
     display: flex;
-    gap: 35px;
+    gap: 25px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    
 }
 
 .menu a:hover {
@@ -58,9 +59,11 @@ body {
     border: none;
     border-radius: 5px;
 
-    padding: 14px 22px;
+    padding: 12px 22px;
 
+    font-style: italic;
     font-weight: bold;
+    
 }
 
 
@@ -389,5 +392,81 @@ body {
     border-radius: 5px;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+/* Style the main Courses button */
+.dropbtn {
+    background-color: #ff3b35; /* Bright orange/red */
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Downward arrow rotation */
+.dropbtn .arrow {
+    transform: rotate(180deg);
+    display: inline-block;
+    font-size: 14px;
+}
+
+/* Dropdown Menu Wrapper (Hidden by default) */
+.dropdown-content {
+    display: none;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(15, 23, 42, 0.95); /* Dark semi-transparent background */
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 5px;
+    list-style: none;
+    z-index: 1000;
+}
+
+/* Links inside the dropdown menu */
+.dropdown-content li a {
+    color: #e2e8f0;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hover effect for standard links */
+.dropdown-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Special styling for the 'Free webinars' link */
+.dropdown-content li a.highlight-red {
+    color: #ff4d29;
+}
+
+/* Small arrow indicator on the right side */
+.right-arrow {
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+/* Show the dropdown menu when hovering over the container */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 

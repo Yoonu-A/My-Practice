@@ -6,165 +6,88 @@
 
 body {
     font-family: Arial, sans-serif;
-
-    background:
-        linear-gradient(rgba(2, 15, 38, 0.88),
-                        rgba(2, 15, 38, 0.92)),
-        url("background.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    color: #dcecff;
+    background: #020d24;
+    color: white;
 }
-
 
 /* Main container */
-
 .container {
     width: 90%;
-    max-width: 800px;
+    max-width: 1100px;
     margin: auto;
-    padding: 70px 0;
+    padding: 60px 0;
 }
 
-
-/* Header */
-
+/* About heading */
 .header {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .header h1 {
-    font-size: 70px;
-    font-weight: 800;
-    color: #e7e9ee;
-    margin-bottom: 55px;
+    font-size: 65px;
+    color: white;
+    margin-bottom: 40px;
 }
 
 .header p {
-    font-size: 30px;
-    line-height: 1.8;
+    font-size: 27px;
+    line-height: 1.7;
     color: #d8e7f7;
 }
 
-
-/* Cards */
-
+/* Mission, Vision, Commitment */
 .card {
-    background: rgba(5, 10, 27, 0.88);
-
-    border: 3px solid #08788a;
-
+    background: #080d20;
+    border: 3px solid #087b8c;
     border-radius: 28px;
 
-    padding: 65px 80px;
-
-    margin-bottom: 55px;
-
-    box-shadow:
-        0 0 20px rgba(0, 190, 220, 0.08);
+    padding: 60px 75px;
+    margin-bottom: 50px;
 }
-
-
-/* Card heading */
 
 .card h2 {
     color: #ff3333;
-
     font-size: 32px;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 }
-
-
-/* Card paragraph */
 
 .card p {
-    font-size: 27px;
-
-    line-height: 1.7;
-
     color: #d8e7f7;
+    font-size: 25px;
+    line-height: 1.7;
 }
 
-
-/* Chat button */
-
-.chat-button {
-    position: fixed;
-
-    right: 35px;
-    bottom: 35px;
-
-    width: 90px;
-    height: 90px;
-
-    background: #19d3e8;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 40px;
-
-    box-shadow:
-        0 0 30px rgba(25, 211, 232, 0.7);
-
-    cursor: pointer;
+/* Card hover */
+.card:hover {
+    border-color: #00d9ff;
+    transition: 0.3s;
 }
-
 
 /* Mobile */
-
 @media (max-width: 768px) {
 
     .container {
         width: 92%;
-        padding: 40px 0;
-    }
-
-    .header {
-        margin-bottom: 60px;
     }
 
     .header h1 {
-        font-size: 42px;
-        margin-bottom: 30px;
+        font-size: 40px;
     }
 
     .header p {
-        font-size: 20px;
-        line-height: 1.6;
+        font-size: 19px;
     }
 
     .card {
-        padding: 40px 30px;
-        border-radius: 22px;
-        margin-bottom: 35px;
+        padding: 35px 25px;
     }
 
     .card h2 {
-        font-size: 25px;
-        margin-bottom: 25px;
+        font-size: 24px;
     }
 
     .card p {
-        font-size: 19px;
-        line-height: 1.7;
-    }
-
-    .chat-button {
-        width: 65px;
-        height: 65px;
-        right: 20px;
-        bottom: 20px;
-        font-size: 28px;
+        font-size: 18px;
     }
 }
