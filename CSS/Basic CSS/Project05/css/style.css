@@ -1,0 +1,301 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080512;
+    color: white;
+}
+
+.navbar {
+    height: 75px;
+    width: 100%;
+    background: #09080d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-bottom: 1px solid #292331;
+}
+
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo img {
+    width: 300px;
+    height: 90px;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #ff3636;
+}
+
+.login,
+.explore {
+    border: none;
+    background: #ff3b32;
+    color: white;
+    font-weight: bold;
+    padding: 15px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: calc(100vh - 75px);
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 60%, #14204d 0%, #0b0820 38%, #080512 75%);
+}
+
+/* Background lines */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(120deg, transparent 49.7%, #172d5c 50%, transparent 50.3%),
+        linear-gradient(60deg, transparent 49.8%, #151b45 50%, transparent 50.2%);
+    opacity: .45;
+}
+
+/* Main heading */
+
+.hero-content {
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 650px;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 span {
+    color: #20e6df;
+}
+
+.hero-content h1 .red {
+    color: #ff3d51;
+}
+
+
+
+/* Stats */
+
+.stats {
+    position: absolute;
+    padding: 18px 25px;
+    border: 1px solid #1d2850;
+    border-radius: 10px;
+    background: rgba(9, 8, 30, .65);
+    text-align: center;
+    z-index: 4;
+}
+
+.stats h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.stats h2 span {
+    color: #ff394c;
+}
+
+.stats p {
+    color: #777;
+    font-size: 10px;
+    margin-top: 7px;
+    letter-spacing: 1px;
+}
+
+.stat1 {
+    top: 14%;
+    right: 18%;
+}
+
+.stat2 {
+    top: 14%;
+    left: 18%;
+}
+
+.stat3 {
+    bottom: 14%;
+    left: 18%;
+}
+
+.stat4 {
+    top: 25%;
+    right: 18%;
+}
+
+/* Code box */
+
+.code-box {
+    position: absolute;
+    right: 7%;
+    top: 48%;
+    width: 260px;
+    padding: 22px;
+    line-height: 1.7;
+    font-family: monospace;
+    font-size: 12px;
+    border: 1px solid #243054;
+    border-radius: 10px;
+    background: rgba(8, 9, 27, .8);
+    z-index: 5;
+}
+
+.pink {
+    color: #ff5a9d;
+}
+
+.red {
+    color: #ff4657;
+}
+
+.cyan {
+    color: #20e8df;
+}
+
+.yellow {
+    color: #ffe05b;
+}
+
+.blue {
+    color: #5c9cff;
+}
+
+.white {
+    color: white;
+}
+
+/* Technology icons */
+
+.tech-icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #25355e;
+    border-radius: 10px;
+    background: #0d0c26;
+    font-size: 20px;
+    z-index: 4;
+}
+
+.icon1 {
+    top: 31%;
+    left: 48%;
+    color: #ff4456;
+}
+
+.icon2 {
+    bottom: 35%;
+    left: 25%;
+    color: #438cff;
+}
+
+.icon3 {
+    top: 46%;
+    right: 26%;
+    color: #24e5dc;
+}
+
+.icon4 {
+    bottom: 28%;
+    right: 25%;
+    color: #ffdc3f;
+}
+
+/* Button */
+
+.explore {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    padding: 16px 35px;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        width: 90%;
+        top: 22%;
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+    }
+
+    .brain {
+        width: 250px;
+        height: 250px;
+    }
+
+    .stats {
+        transform: scale(.7);
+    }
+
+    .code-box {
+        display: none;
+    }
+
+    .stat1 {
+        left: 60%;
+    }
+
+    .stat2 {
+        left: -5%;
+    }
+
+    .stat3 {
+        left: -5%;
+    }
+
+    .stat4 {
+        right: -5%;
+    }
+}
