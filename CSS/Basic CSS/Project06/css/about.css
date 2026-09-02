@@ -15,7 +15,7 @@ body {
 .container {
     
    width: 90%; 
-    width: 800px;
+    width: 700px;
     min-height: 80vh;
     margin: auto;
     padding: 60px 0;
@@ -92,3 +92,177 @@ body {
         font-size: 18px;
     }
 }
+
+.footer {
+    background: linear-gradient(
+        135deg,
+        #060118,
+        #07011b,
+        #100a29
+    );
+
+    border-top: 2px solid #00ffff;
+
+    box-shadow: 0 -5px 20px rgba(0, 255, 255, 0.4);
+
+    padding-top: 40px;
+}
+
+
+/* Footer Container */
+
+.footer-container {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1.5fr;
+
+    gap: 40px;
+
+    padding: 20px 30px 35px;
+}
+
+
+/* Footer Box */
+
+.footer-box {
+    min-height: 150px;
+}
+
+
+/* Logo */
+
+.footer-logo {
+    width: 170px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Company Details */
+
+.footer-box p {
+    color: #eeeeee;
+
+    font-size: 14px;
+
+    margin: 14px 0;
+
+    line-height: 1.5;
+}
+
+
+/* Headings */
+
+.footer-box h3 {
+    color: #ff5555;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 8px rgba(255, 50, 50, 0.7);
+}
+
+
+/* Links */
+
+.footer-box a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+    transition: 0.3s;
+}
+
+
+.footer-box a:hover {
+    color: #00ffff;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.social-icons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 45px);
+
+    gap: 12px;
+}
+
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #53617d;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 16px;
+
+    margin: 0;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    transition: 0.3s;
+}
+
+
+.social-icons a:hover {
+    color: #00ffff;
+
+    border-color: #00ffff;
+
+    box-shadow:
+        0 0 12px #00ffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+
+    text-align: center;
+
+    padding: 18px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+
+
+
