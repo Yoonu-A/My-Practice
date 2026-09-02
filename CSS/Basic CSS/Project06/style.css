@@ -746,7 +746,12 @@ body {
 
 body {
     font-family: Arial, sans-serif;
-    background: #150e38;
+    background:   linear-gradient(
+        135deg,
+        #060118,
+        #07011b,
+        #100a29
+    );
     color: white;
 }
 
