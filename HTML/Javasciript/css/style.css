@@ -1,18 +1,191 @@
-.col-2
-{
-   height: 200px;
-    background-color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.col-4
-{
 
-    height: 200px;
-    background-color: rgb(0, 225, 255);
+body {/*
+    font-family: Arial, sans-serif;
 }
-.row-8
-{
-    height: 100px;
-    background-color: green;
-    display: inline-block;
-    width: 24.5%;
+
+
+/* Navigation Bar */
+.navbar {
+    height: 70px;
+    background-color: #252a30;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 10;
+}
+
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-right: 30px;
+}
+
+
+/* Menu */
+.menu {
+    display: flex;
+    height: 100%;
+}
+
+.menu a {
+    color: #999;
+    text-decoration: none;
+
+    padding: 25px 15px;
+
+    font-size: 17px;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu .active {
+    
+    color: white;
+}
+
+
+/* Search */
+.search {
+    margin-left: auto;
+
+    display: flex;
+    gap: 10px;
+}
+
+.search input {
+    width: 235px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+.search button {
+    padding: 10px 18px;
+
+    background-color: transparent;
+    color: #00a878;
+
+    border: 1px solid #00a878;
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+.search button:hover {
+    background-color: #00a878;
+    color: white;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Course Box */
+.course-box {
+    width: 600px;
+    min-height: 290px;
+
+    background-color: rgba(26, 22, 22, 0.75);
+
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+       background-color: hsla(22, 76%, 50%, 0.112);
+    color: rgb(203, 217, 8);
+    width: 30%;
+    alt: 170px;
+    margin:auto;
+    margin-top: 400px;
+    
+    
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: -10px 10px 18px -2px rgba(240, 228, 215, 0.75);
+}
+
+
+/* Heading */
+.course-box h1 {
+    color: rgb(244, 156, 24);
+
+    font-size: 38px;
+    letter-spacing: 2px;
+
+    margin-bottom: 70px;
+    font-style: italic;
+}
+
+
+/* Online Course */
+.course-box h2 {
+    color: rgb(14, 0, 0);
+
+    font-size: 25px;
+    letter-spacing: 2px;
+
+    margin-bottom: 65px;
+    font-style: italic;
+    font-size: 30px;
+}
+
+
+/* Subscribe Button */
+.subscribe {
+    background-color: #f10f07;
+
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 13px 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.subscribe:hover {
+    background-color: #cc0000;
 }
