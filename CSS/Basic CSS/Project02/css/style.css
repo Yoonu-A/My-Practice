@@ -1,7 +1,317 @@
-div
-{
-    height: 1000px;
-    background: radial-gradient(rgb(228, 193, 127),rgb(66, 63, 63));
-    border-radius: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background: #09051d;
+    color: white;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+    background: #080b29;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    border-bottom: 2px solid #22245b;
+}
+
+.logo {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: white;
+}
+
+.logo b {
+    color: #ff4d87;
+}
+
+.logo small {
+    display: block;
+    font-size: 6px;
+    color: #aaa;
+    margin-left: 25px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff4d87;
+}
+
+
+/* Login Button */
+
+.login {
+    background: linear-gradient(90deg, #ff4141, #ff4d87);
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+
+
+/* ================= DROPDOWN ================= */
+
+.dropdown {
+    position: relative;
+}
+
+.course-btn {
+    background: linear-gradient(90deg, #ff4141, #ff4d87);
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 165px;
+    background: #111538;
+    border: 1px solid #34376c;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 12px;
+    font-size: 11px;
+    border-bottom: 1px solid #272a52;
+}
+
+.dropdown-menu a:hover {
+    background: #202451;
+    color: #ff4d87;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 630px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at center,
+        rgba(102, 20, 130, 0.5),
+        transparent 45%),
+        linear-gradient(135deg, #12062d, #08051b);
+}
+
+
+/* Background lines */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(30deg,
+        transparent 49%,
+        rgba(50, 100, 160, .2) 50%,
+        transparent 51%),
+
+        linear-gradient(150deg,
+        transparent 49%,
+        rgba(50, 100, 160, .2) 50%,
+        transparent 51%);
+
+    background-size: 350px 350px;
+}
+
+
+/* Hero Text */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 65px;
+}
+
+.hero h1 {
+    font-size: 30px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.hero h1 span {
+    color: #22e6e9;
+}
+
+.hero h1 strong {
+    color: #ff4d87;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    position: absolute;
+    left: 70px;
+    top: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.stat-box {
+    width: 125px;
+    padding: 15px;
+    background: rgba(15, 20, 55, .8);
+    border: 1px solid #39406e;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-box h2 {
+    color: white;
+    font-size: 22px;
+}
+
+.stat-box p {
+    font-size: 8px;
+    margin-top: 5px;
+    color: #ddd;
+}
+
+
+/* ================= BRAIN ================= */
+
+.brain {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+
+    width: 270px;
+    height: 270px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 150px;
+
+    background:
+        radial-gradient(circle,
+        rgba(0, 255, 255, .2),
+        rgba(255, 0, 130, .2),
+        transparent 70%);
+
+    box-shadow:
+        0 0 30px #20dbe7,
+        0 0 70px rgba(255, 40, 150, .5);
+}
+
+
+/* ================= CODE BOX ================= */
+
+.code-box {
+    position: absolute;
+    right: 70px;
+    top: 200px;
+
+    width: 230px;
+
+    background: rgba(12, 12, 35, .9);
+    border: 1px solid #42456f;
+    border-radius: 10px;
+
+    padding: 18px;
+
+    box-shadow: 0 0 20px rgba(50, 50, 150, .4);
+}
+
+.dots {
+    color: #ff5b78;
+    font-size: 10px;
+    margin-bottom: 12px;
+}
+
+.code-box p {
+    color: #bbb;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.code-box code {
+    color: #38e9e9;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .stats {
+        left: 20px;
+        top: 150px;
+    }
+
+    .code-box {
+        right: 20px;
+        top: 250px;
+    }
+
+    .brain {
+        width: 220px;
+        height: 220px;
+        font-size: 110px;
+    }
 }
