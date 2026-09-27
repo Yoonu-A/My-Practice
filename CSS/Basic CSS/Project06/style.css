@@ -993,7 +993,67 @@ body {
 
     font-size: 13px;
 }
+/* Desktop */
+.container {
+    width: 100%;
+}
 
+/* Mobile Responsive */
+@media (max-width: 400px) {
+
+    body {
+        width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .hero {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 
 
