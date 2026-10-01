@@ -30,7 +30,7 @@ else
     console.log("Payment is not successful");
 }*/
 
-let whoishere="yoonus";
+/*let whoishere="yoonus";
 
 if(whoishere==="student")
 {
@@ -47,5 +47,43 @@ else if(whoishere==="admin")
 else
 {
     console.log("Who are you?");
-}
+}*/
 
+
+//AND OPERATORS
+
+
+/*let login=true;
+let payment=true;
+
+if(login && payment)
+{
+    console.log("Login and payment are successful");
+}
+else if(login && !payment)
+{
+    console.log("Login is successful but payment failed");
+}
+else if(!login && payment)
+{
+    console.log("Login failed but payment is successful");
+}
+else
+{
+    console.log("Login and payment are not successful");
+}*/
+
+
+//OR OPERATOR
+
+let Email=false;
+let Mobilenumber=false;
+
+if(Email || Mobilenumber)
+{
+    console.log("Email or Mobile Number is valid");
+}
+else
+{
+    console.log("Both Email and Mobile Number are invalid");
+}
