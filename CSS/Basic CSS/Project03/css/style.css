@@ -1,219 +1,173 @@
- div {
+/* --- Base Resets & Typography --- */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #050817;
-    color: white;
+    background-color: #ffffff;
+    color: #333333;
 }
 
+/* --- Navigation Bar --- */
+.navbar {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-/* Header */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
 
-header {
-    height: 190px;
+.logo-area {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 5%;
-    background: #030712;
+    gap: 15px;
 }
 
-.logo {
-    font-size: 42px;
-    font-weight: bold;
-    color: #20d9ff;
+.main-logo {
+    height: 50px;
+    object-fit: contain;
 }
 
-.logo span {
-    color: #ff4b43;
+.badge-logo {
+    height: 45px;
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    object-fit: contain;
 }
 
-.logo small {
-    display: block;
-    font-size: 11px;
-    color: #ff5750;
-    margin-top: 5px;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.menu {
-    font-size: 55px;
+.nav-links a {
+    text-decoration: none;
+    color: #444444;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0056b3; /* Slate Blue hover effect */
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
     cursor: pointer;
+    color: #555;
 }
 
-
-/* Hero */
-
-.hero {
-    min-height: 1200px;
-    text-align: center;
-    padding: 60px 5%;
-
-    background:
-        radial-gradient(circle, #17104b, #070718 60%, #03040c);
-
-    position: relative;
+/* --- Hero Section --- */
+.hero-section {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fdfdfd 0%, #f4f7f6 100%);
     overflow: hidden;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero h1 span {
-    color: #16d9ff;
-}
-
-.hero h2 {
-    font-size: 40px;
-}
-
-.hero h2 span {
-    color: #e84b8b;
-}
-
-
-/* Statistics */
-
-.stats {
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    max-width: 900px;
-    margin: 80px auto;
+    align-items: center;
+    padding: 40px 20px;
 }
 
-.box {
-    width: 30%;
-    padding: 45px 20px;
-    border: 2px solid #123d62;
-    border-radius: 20px;
-    background: rgba(10, 5, 30, 0.8);
+.hero-text-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40px;
 }
 
-.box strong {
-    font-size: 42px;
+.branding-wrapper {
+    max-width: 400px;
 }
 
-.box strong span {
-    color: #ff4c43;
-}
-
-.box p {
-    margin-top: 25px;
-    color: #aaa9c2;
-}
-
-
-/* Brain */
-
-.brain {
-    font-size: 180px;
-    margin: 50px auto;
-    filter: drop-shadow(0 0 30px #00eaff);
-}
-
-
-/* Code */
-
-.code-box {
-    position: absolute;
-    right: 7%;
-    bottom: 100px;
-
-    width: 330px;
-    padding: 25px;
-
-    text-align: left;
-
-    border: 2px solid #123d62;
-    border-radius: 20px;
-
-    background: #08091b;
-}
-
-.code-box p {
-    color: #777;
+.hero-brand-logo {
+    height: 70px;
     margin-bottom: 15px;
 }
 
-.code-box code {
-    color: #00d9ff;
-    line-height: 1.6;
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #0b2347; /* Deep Navy */
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
-
-/* Bottom */
-
-.bottom {
-    padding: 45px;
-    text-align: center;
-    background: #09051b;
+.hero-title .red-text {
+    color: #ce1126; /* Crimson Red */
 }
 
-.bottom h2 {
-    font-size: 42px;
+.hero-tagline {
+    font-size: 1.5rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+    font-weight: 300;
 }
 
-.bottom span {
-    color: #ff5147;
+.hero-image-side {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.bottom h2 {
-    color: #16d9ff;
+.students-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    /* Optional slight drop shadow to make the layout pop */
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.08));
 }
 
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    header {
-        height: 140px;
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
     }
-
-    .logo {
-        font-size: 27px;
+    
+    .hero-text-side {
+        padding-right: 0;
+        margin-bottom: 40px;
+        align-items: center;
     }
-
-    .menu {
-        font-size: 40px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero h2 {
-        font-size: 25px;
-    }
-
-    .stats {
+    
+    .branding-wrapper {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .box {
-        width: 90%;
-    }
-
-    .brain {
-        font-size: 120px;
-    }
-
-    .code-box {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin: 50px auto;
-        width: 90%;
-    }
-
-    .bottom h2 {
-        font-size: 28px;
+    .nav-links {
+        display: none; /* Hide standard links on mobile; typical for burger menus */
     }
 }
