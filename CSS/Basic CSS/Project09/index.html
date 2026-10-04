@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">CodeLearn</div>
+
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search C topics...">
+        <button onclick="searchTopic()">Search</button>
+    </div>
+
+    <button class="dark-btn" onclick="toggleDarkMode()">🌙</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<div class="layout">
+
+    <aside id="sidebar">
+        <h3>C Programming</h3>
+
+        <a href="#intro">Introduction</a>
+        <a href="#features">Features</a>
+        <a href="#syntax">Syntax</a>
+        <a href="#variables">Variables</a>
+        <a href="#datatypes">Data Types</a>
+        <a href="#operators">Operators</a>
+        <a href="#conditions">Conditions</a>
+        <a href="#loops">Loops</a>
+        <a href="#functions">Functions</a>
+    </aside>
+
+    <main>
+
+        <h1>C Programming Language</h1>
+
+        <p>
+            C is a powerful general-purpose programming language.
+            It is widely used for system programming, software development
+            and embedded systems.
+        </p>
+
+        <hr>
+
+        <section id="intro">
+            <h2>Introduction to C</h2>
+
+            <p>
+                C is one of the most popular programming languages.
+                It was developed by Dennis Ritchie.
+            </p>
+        </section>
+
+        <section id="features">
+            <h2>Features of C</h2>
+
+            <ul>
+                <li>Simple and fast</li>
+                <li>Portable</li>
+                <li>Structured programming</li>
+                <li>Rich set of operators</li>
+                <li>Supports pointers</li>
+            </ul>
+        </section>
+
+        <section id="syntax">
+            <h2>Basic C Syntax</h2>
+
+            <div class="code-box">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello World");
+    return 0;
+}
+</pre>
+            </div>
+        </section>
+
+        <section id="variables">
+            <h2>Variables</h2>
+
+            <p>
+                A variable is used to store data in a program.
+            </p>
+
+            <div class="code-box">
+<pre>
+int age = 21;
+float price = 10.5;
+char grade = 'A';
+</pre>
+            </div>
+        </section>
+
+        <section id="datatypes">
+            <h2>Data Types</h2>
+
+            <table>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Example</th>
+                </tr>
+
+                <tr>
+                    <td>int</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td>float</td>
+                    <td>10.5</td>
+                </tr>
+
+                <tr>
+                    <td>char</td>
+                    <td>'A'</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="operators">
+            <h2>Operators</h2>
+
+            <p>
+                C supports arithmetic, relational, logical and assignment operators.
+            </p>
+
+            <div class="code-box">
+<pre>
+int a = 10;
+int b = 5;
+
+printf("%d", a + b);
+</pre>
+            </div>
+        </section>
+
+        <section id="conditions">
+            <h2>Conditions</h2>
+
+            <div class="code-box">
+<pre>
+int age = 20;
+
+if (age >= 18) {
+    printf("Adult");
+}
+</pre>
+            </div>
+        </section>
+
+        <section id="loops">
+            <h2>Loops</h2>
+
+            <p>Loops are used to repeat a block of code.</p>
+
+            <div class="code-box">
+<pre>
+for(int i = 1; i <= 5; i++) {
+    printf("%d", i);
+}
+</pre>
+            </div>
+        </section>
+
+        <section id="functions">
+            <h2>Functions</h2>
+
+            <p>
+                Functions are reusable blocks of code.
+            </p>
+
+            <div class="code-box">
+<pre>
+void hello() {
+    printf("Hello");
+}
+</pre>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>© 2026 CodeLearn | C Programming Tutorial</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
