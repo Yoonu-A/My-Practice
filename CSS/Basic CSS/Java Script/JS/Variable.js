@@ -88,12 +88,17 @@ else
     console.log("Both Email and Mobile Number are invalid");
 }*/
 
+
+
 //Arrays
 
-let fruits=["Apple", "Banana", "Mango", "Orange"];
+/*let fruits=["Apple", "Banana", "Mango", "Orange"];
 console.log(fruits[0]);
 console.log(fruits[1]);
 console.log(fruits[2]);
 console.log(fruits[3]);
 console.log(fruits.length);
 console.log(fruits[fruits.length]);
+console.log("we have " + fruits.length + " fruits in the basket");
+console.log(`we have ${fruits.length - 1} fruits in the basket`);
+fruits.push("Grapes");*/
