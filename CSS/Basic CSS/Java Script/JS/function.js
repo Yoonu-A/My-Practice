@@ -7,6 +7,6 @@ sayHello(5000,100);*/
 
 let visitedlist=["India", "USA", "UK", "Canada", "Australia"];
 visitedlist.forEach((country,position)=> {
-    console.log(` ${position + 1}.  I have visited ${country}`);
+    console.log(` ${++position }.  I have visited ${country}`);
 });
 
