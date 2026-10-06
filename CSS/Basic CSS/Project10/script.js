@@ -175,6 +175,6 @@ window.addEventListener("scroll", function () {
 // ================= PAGE LOAD =================
 window.addEventListener("load", function () {
     console.log(
-        "Welcome to TechNova Academy!"
+        "Welcome to MARS TECH Academy!"
     );
 });
