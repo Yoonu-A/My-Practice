@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+<body>
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" width="104" height="142">
+
+<script>
+    // Change the image source
+    $("img").attr("src", "https://www.w3schools.com/images/w3schools_green.jpg");
+
+    // Change the image width and height
+    $("img").css({"width": "400px", "height": "400px"});
+
+    // Change the image alt text
+    $("img").attr("alt", "W3Schools Logo");
+    </script>
+</body>
+</html>
