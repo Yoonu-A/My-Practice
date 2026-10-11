@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>jQuery Project</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #demo {
+            color: blue;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="demo">Welcome to jQuery!</h1>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="colorBtn">Change Color</button>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#hideBtn").click(function() {
+                $("#demo").hide();
+            });
+
+            $("#showBtn").click(function() {
+                $("#demo").show();
+            });
+
+            $("#colorBtn").click(function() {
+                $("#demo").css("color", "red");
+            });
+
+        });
+    </script>
+
+</body>
+</html>
