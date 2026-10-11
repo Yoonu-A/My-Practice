@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+<body>
+ <div id="container"> Welcome to the world of jQuery Selectors! </div><br>
+
+ <div class="highlight">This is a highlighted paragraph.</div><br>
+
+ <p>This is a normal paragraph.</p><br>
+
+ <form action="">
+    <input type="text" name="name" placeholder="Enter your name">
+    <input type="password" name="password" placeholder="Enter your password">
+ </form>
+
+ <div id="container"> 
+    <p>JQuery is awesome!</p>
+ </div><br>
+ <div class="highlight">
+    <p>This is another highlighted paragraph.</p>
+    <div id="container">
+        <p>JQuery is awesome!</p>
+    </div>
+ </div><br>
+
+
+
+ 
+<script >
+    //ID Selector
+    $("#container").text("Welcome to the world of jQuery Selectors!");
+
+    //Class Selector
+    $(".highlight").css("background-color", "yellow");
+
+    //Element Selector
+    $("p").css("color", "blue");
+
+    //Attribute Selector
+    $("input[name='name']").attr("placeholder", "Enter your First name").css("border", "2px solid black");
+    $("input[name='password']").attr("placeholder", "Enter your  password").css("border", "2px solid black");
+
+    //Descendant Selector
+    $("#container p").css("font-weight", "bold");
+
+    //Multiple Selector
+    $("p, .highlight").css("font-size", "20px");
+
+    //Child Selector
+    $(".highlight > p").css("text-decoration", "underline");
+
+</script>
+    
+</body>
+</html>
