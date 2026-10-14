@@ -1,37 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Neon Login</title>
+<style>
+:root{
+  --bg:#050a17; --panel:#0e1624; --field:#070c18; --cyan:#3fe6ff; --cyan-soft:#2fb8d1;
+  --text:#d7e6f2; --muted:#8a9bb0; --purple:#b01cd6;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#050a17; } }
+*{box-sizing:border-box}
+html{height:100%; scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; min-height:100%; background:var(--bg); color:var(--text);
+  font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  display:grid; place-items:center; padding:24px;
+}
+.ring{
+  position:relative; width:min(92vw,460px); aspect-ratio:1; border-radius:50%;
+  display:grid; place-items:center;
+  background:conic-gradient(from 0deg,var(--cyan),var(--cyan-soft),var(--purple),var(--cyan-soft),var(--cyan));
+  box-shadow:0 0 40px rgba(63,230,255,.45),0 0 120px rgba(63,230,255,.2);
+  animation:spin 8s linear infinite;
+}
+.ring::before{ /* inner dark disc */
+  content:""; position:absolute; inset:5px; border-radius:50%; background:radial-gradient(circle at 50% 30%,#162233,var(--panel) 70%);
+}
+@keyframes spin{ to{ filter:hue-rotate(360deg) } }
+.card{
+  position:relative; width:64%; text-align:center; z-index:1;
+}
+h1{
+  margin:0; font-size:clamp(28px,8vw,40px); letter-spacing:.5px; color:#e9fdff;
+  text-shadow:0 0 8px var(--cyan),0 0 22px var(--cyan);
+}
+.sub{margin:4px 0 22px; font-size:13px; color:var(--muted)}
+.field{position:relative; margin-bottom:14px}
+.field input{
+  width:100%; height:46px; border-radius:999px; border:2px solid transparent;
+  background:var(--field); color:var(--text); font:inherit; font-size:14px; padding:0 44px 0 18px; outline:none;
+  transition:border-color .2s, box-shadow .2s;
+}
+.field label{
+  position:absolute; left:20px; top:50%; transform:translateY(-50%); font-size:14px; color:var(--muted);
+  pointer-events:none; transition:.2s; padding:0 4px;
+}
+.field input:focus,.field input:not(:placeholder-shown){border-color:var(--cyan); box-shadow:0 0 12px rgba(63,230,255,.5), inset 0 0 8px rgba(63,230,255,.25)}
+.field input:focus + label,.field input:not(:placeholder-shown) + label{
+  top:0; font-size:11px; font-weight:700; color:var(--cyan); background:var(--panel);
+}
+.eye{
+  position:absolute; right:14px; top:50%; transform:translateY(-50%); background:none; border:0; color:var(--muted);
+  cursor:pointer; padding:4px; display:grid; place-items:center;
+}
+.eye:focus-visible,.btn:focus-visible,a:focus-visible,.row input:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
+.row{display:flex; justify-content:space-between; align-items:center; font-size:12px; margin:2px 4px 18px; color:var(--muted)}
+.row label{display:flex; gap:6px; align-items:center; cursor:pointer}
+.row a{color:var(--cyan); text-decoration:none; font-weight:700}
+.btn{
+  width:100%; height:46px; border-radius:999px; border:2px solid var(--cyan-soft); cursor:pointer;
+  background:rgba(63,230,255,.12); color:#eaffff; font:inherit; font-weight:800; letter-spacing:2px; font-size:14px;
+  box-shadow:0 0 14px rgba(63,230,255,.35); transition:background .2s, box-shadow .2s;
+}
+.btn:hover{background:rgba(63,230,255,.28); box-shadow:0 0 24px rgba(63,230,255,.65)}
+.foot{margin-top:28px; font-size:12px; color:var(--muted)}
+.foot a{color:var(--cyan); font-weight:700; text-decoration:none; text-shadow:0 0 8px rgba(63,230,255,.6)}
+.msg{min-height:16px; margin-top:10px; font-size:12px; color:var(--cyan)}
+@media (prefers-reduced-motion:reduce){.ring{animation:none}}
+</style>
 </head>
 <body>
-    <!-- <h3><center>Calculator</center></h3> -->
-   /*<h4><center>Enter two numbers to perform addition, subtraction, multiplication, and division.</center></h4>
-    <h5>Sum Calculation</h5>
-<input id="num1"> 
-<input id="num2">
-<button onclick="answer()">Add</button>
-<p id="result">Result</p> <br>
-
-
-
-
-
-
+<div class="ring">
+  <div class="card">
+    <h1>WELCOME</h1>
+    <p class="sub">Login to your account</p>
+    <div class="field">
+      <input id="email" type="email" placeholder=" " autocomplete="email">
+      <label for="email">Email Address</label>
+    </div>
+    <div class="field">
+      <input id="pw" type="password" placeholder=" " autocomplete="current-password">
+      <label for="pw">Password</label>
+      <button class="eye" id="eye" type="button" aria-label="Show password">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+    </div>
+    <div class="row">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot?</a>
+    </div>
+    <button class="btn" id="go" type="button">LOGIN</button>
+    <div class="msg" id="msg" role="status"></div>
+    <div class="foot">Don't have an account? <a href="#">Sign Up</a></div>
+  </div>
+</div>
 <script>
-    let box1 = document.getElementById("num1");
-    let box2 = document.getElementById("num2");
-    let result = document.getElementById("result");
-    let button = document.querySelector("button");
-
-    button.addEventListener("click", function() {
-        let num1 = Number(box1.value);
-        let num2 = Number(box2.value);
-        let sum = num1 + num2;
-        result.textContent = "Result: " + sum;
-    });
+const pw=document.getElementById('pw'), eye=document.getElementById('eye'), msg=document.getElementById('msg');
+eye.onclick=()=>{const show=pw.type==='password'; pw.type=show?'text':'password'; eye.setAttribute('aria-label',show?'Hide password':'Show password');};
+document.getElementById('go').onclick=()=>{
+  const e=document.getElementById('email').value.trim();
+  msg.textContent=(!e||!pw.value)?'Enter your email and password.':'Demo only: no login happens here.';
+};
 </script>
-
 </body>
 </html>
