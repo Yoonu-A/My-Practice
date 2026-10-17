@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoonu Store | Modern Online Shopping in Sri Lanka - Electronics, Fashion, Home & More</title>
+  <meta name="description" content="Shop authentic smartphones, laptops, electronics, men's & women's fashion, shoes, watches, gaming accessories and baby products at Yoonu Store. Fast islandwide delivery in Sri Lanka.">
+  <meta name="keywords" content="Yoonu Store, online shopping Sri Lanka, buy smartphones Colombo, electronics, laptops, fashion, shoes, watches, LKR prices">
+  
+  <!-- Favicon Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Top Notice & Utility Announcement Bar
+       ========================================================================= -->
+  <aside class="top-notice-bar" aria-label="Announcement">
+    <div class="container top-notice-content">
+      <div class="notice-left">
+        <span class="notice-pill"><i class="fa-solid fa-truck-fast"></i> ISLANDWIDE DELIVERY</span>
+        <span>Free islandwide delivery on orders over <strong>Rs. 15,000</strong> | 48-Hour Colombo Express</span>
+      </div>
+      <div class="top-links">
+        <span><i class="fa-solid fa-phone"></i> +94 11 234 5678</span>
+        <span><i class="fa-solid fa-globe"></i> LKR (Rs.) | EN</span>
+        <a href="#footer" id="top-help-link"><i class="fa-regular fa-circle-question"></i> Help Center</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       2. Master Header & Navigation (Amazon-Inspired Utility Architecture)
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-main">
+      <div class="container header-inner">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="brand-logo" id="brand-logo-link" title="Yoonu Store Home">
+          <div class="brand-icon-wrapper">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Yoonu<span>Store</span></span>
+            <span class="brand-tagline">Sri Lanka's Premier Hub</span>
+          </div>
+        </a>
+
+        <!-- Location Delivery Selector -->
+        <div class="header-location" id="header-location-btn" title="Delivery Location">
+          <i class="fa-solid fa-location-dot location-icon"></i>
+          <div class="location-text">
+            <span class="location-subtitle">Deliver to</span>
+            <span class="location-title" id="current-location-text">Sri Lanka</span>
+          </div>
+        </div>
+
+        <!-- Master Advanced Search Bar -->
+        <div class="header-search">
+          <form class="search-box" id="global-search-form" role="search" onsubmit="return false;">
+            <select class="search-category-select" id="search-category-select" aria-label="Select Search Category">
+              <option value="All">All Categories</option>
+              <option value="Smartphones">Smartphones</option>
+              <option value="Computers & Laptops">Laptops & PCs</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Men’s Fashion">Men's Fashion</option>
+              <option value="Women’s Fashion">Women's Fashion</option>
+              <option value="Shoes">Shoes</option>
+              <option value="Watches">Watches</option>
+              <option value="Home & Kitchen">Home & Kitchen</option>
+              <option value="Beauty & Personal Care">Beauty & Personal</option>
+              <option value="Sports & Fitness">Sports & Fitness</option>
+              <option value="Gaming Accessories">Gaming</option>
+              <option value="Baby Products">Baby Products</option>
+            </select>
+            <div class="search-input-wrapper">
+              <input type="text" 
+                     id="search-input" 
+                     class="search-input" 
+                     placeholder="Search over 1,000+ authentic products, brands, deals..." 
+                     autocomplete="off" 
+                     aria-label="Search Yoonu Store">
+              <i class="fa-solid fa-xmark search-clear-btn" id="search-clear-btn" title="Clear search"></i>
+            </div>
+            <button type="button" class="search-btn" id="search-submit-btn" aria-label="Submit Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <!-- Live Autocomplete Suggestions Dropdown -->
+          <div class="search-suggestions-dropdown" id="search-suggestions-dropdown">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+        <!-- Header Actions: Account, Orders, Wishlist, Cart -->
+        <div class="header-actions">
+          
+          <!-- Account / Sign In -->
+          <div class="action-link" id="header-account-btn" role="button" tabindex="0" title="Account & Lists">
+            <span class="action-sub" id="header-user-greeting">Hello, Sign In</span>
+            <span class="action-title">
+              <span id="header-account-label">Account & Lists</span>
+              <i class="fa-solid fa-caret-down" style="font-size: 0.7rem;"></i>
+            </span>
+          </div>
+
+          <!-- Returns & Orders -->
+          <div class="action-link" id="header-orders-btn" role="button" tabindex="0" title="View Orders">
+            <span class="action-sub">Returns</span>
+            <span class="action-title">& Orders</span>
+          </div>
+
+          <!-- Wishlist Pill -->
+          <div class="wishlist-pill" id="header-wishlist-btn" role="button" tabindex="0" title="Saved Wishlist">
+            <i class="fa-regular fa-heart" style="font-size: 1.25rem;"></i>
+            <span class="wishlist-badge" id="wishlist-count-badge">0</span>
+          </div>
+
+          <!-- Shopping Cart Pill -->
+          <div class="header-cart-btn" id="header-cart-btn" role="button" tabindex="0" title="Open Shopping Cart">
+            <div class="cart-icon-wrapper">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count-badge" id="cart-count-badge">0</span>
+            </div>
+            <div class="cart-preview-text">
+              <span class="action-sub">Cart</span>
+              <span class="action-title" id="cart-preview-total">Rs. 0</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-Navigation Bar -->
+    <nav class="header-subnav" aria-label="Secondary Navigation">
+      <div class="container subnav-inner">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="subnav-categories-trigger" id="all-categories-trigger" aria-label="Toggle All Categories">
+            <i class="fa-solid fa-bars"></i>
+            <span>All Categories</span>
+          </button>
+          
+          <div class="subnav-links" id="quick-subnav-links">
+            <a href="#deals-section" class="subnav-link hot-deal"><i class="fa-solid fa-bolt"></i> Today's Deals</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="All">Best Sellers</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="Smartphones">Smartphones</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="Computers & Laptops">Laptops</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="Electronics">Electronics</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="Men’s Fashion">Men's</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="Women’s Fashion">Women's</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="Gaming Accessories">Gaming</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="Home & Kitchen">Home</a>
+            <a href="#shop-section" class="subnav-link" data-filter-category="Baby Products">Baby</a>
+          </div>
+        </div>
+
+        <!-- Manager / Admin Portal Quick Switch -->
+        <button class="admin-portal-trigger" id="admin-portal-toggle-btn" title="Open Management Dashboard">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Admin Portal</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       3. Promotional Hero Carousel Banner
+       ========================================================================= -->
+  <section class="hero-section" aria-label="Promotional Carousel">
+    <div class="carousel-container" id="hero-carousel">
+      
+      <!-- Slide 1: Tech Megasale -->
+      <div class="carousel-slide active" data-slide="0">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80" 
+             alt="Flagship Tech Mega Sale" 
+             class="carousel-bg">
+        <div class="carousel-overlay"></div>
+        <div class="container">
+          <div class="carousel-caption">
+            <span class="carousel-tag"><i class="fa-solid fa-bolt"></i> MEGA TECH SALE 2026</span>
+            <h2 class="carousel-title">Supercharge Your World With Flagship Tech</h2>
+            <p class="carousel-subtitle">Save up to 30% on Apple iPhone 15 Pro Max, MacBook Air M3, and Samsung S24 Ultra with genuine company warranty.</p>
+            <div class="carousel-btn-group">
+              <button class="btn btn-primary" onclick="app.filterByCategory('Smartphones')">
+                <i class="fa-solid fa-mobile-screen-button"></i> Shop Smartphones
+              </button>
+              <button class="btn btn-outline" style="color: #fff; border-color: #fff;" onclick="app.filterByCategory('Computers & Laptops')">
+                Explore Laptops
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Fashion & Elegance -->
+      <div class="carousel-slide" data-slide="1">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80" 
+             alt="New Season Fashion Drop" 
+             class="carousel-bg">
+        <div class="carousel-overlay"></div>
+        <div class="container">
+          <div class="carousel-caption">
+            <span class="carousel-tag"><i class="fa-solid fa-gem"></i> NEW SEASON ARRIVALS</span>
+            <h2 class="carousel-title">Pure Linen & Silk Designer Collection</h2>
+            <p class="carousel-subtitle">Crafted for effortless tropical comfort. Explore breath-taking dresses, tailored linen trousers, and genuine leather wear.</p>
+            <div class="carousel-btn-group">
+              <button class="btn btn-primary" onclick="app.filterByCategory('Women’s Fashion')">
+                Shop Women's
+              </button>
+              <button class="btn btn-outline" style="color: #fff; border-color: #fff;" onclick="app.filterByCategory('Men’s Fashion')">
+                Shop Men's
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Pro Gaming Gear -->
+      <div class="carousel-slide" data-slide="2">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80" 
+             alt="Next-Gen Gaming Gear" 
+             class="carousel-bg">
+        <div class="carousel-overlay"></div>
+        <div class="container">
+          <div class="carousel-caption">
+            <span class="carousel-tag"><i class="fa-solid fa-gamepad"></i> LEVEL UP YOUR BATTLESTATION</span>
+            <h2 class="carousel-title">Pro Esports Accessories & Audio</h2>
+            <p class="carousel-subtitle">Dominate the leaderboard with Razer BlackWidow mechanical keyboards, Logitech G502 X Plus, and SteelSeries headsets.</p>
+            <div class="carousel-btn-group">
+              <button class="btn btn-primary" onclick="app.filterByCategory('Gaming Accessories')">
+                <i class="fa-solid fa-trophy"></i> Explore Gaming
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Arrows -->
+      <button class="carousel-nav-btn prev" id="carousel-prev-btn" aria-label="Previous Slide">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="carousel-nav-btn next" id="carousel-next-btn" aria-label="Next Slide">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators" id="carousel-indicators">
+        <span class="carousel-dot active" data-slide-to="0"></span>
+        <span class="carousel-dot" data-slide-to="1"></span>
+        <span class="carousel-dot" data-slide-to="2"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Trust Pillars & Value Highlights
+       ========================================================================= -->
+  <section class="trust-pillars-section container" aria-label="Value Propositions">
+    <div class="trust-pillars-grid">
+      <div class="trust-pillar-card">
+        <div class="pillar-icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+        <div class="pillar-content">
+          <h4>Islandwide Delivery</h4>
+          <p>Free for orders over Rs. 15,000</p>
+        </div>
+      </div>
+      <div class="trust-pillar-card">
+        <div class="pillar-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="pillar-content">
+          <h4>100% Authentic</h4>
+          <p>Official brand warranties included</p>
+        </div>
+      </div>
+      <div class="trust-pillar-card">
+        <div class="pillar-icon-box"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        <div class="pillar-content">
+          <h4>7-Day Easy Returns</h4>
+          <p>Hassle-free exchange policy</p>
+        </div>
+      </div>
+      <div class="trust-pillar-card">
+        <div class="pillar-icon-box"><i class="fa-solid fa-lock"></i></div>
+        <div class="pillar-content">
+          <h4>Flexible Payment</h4>
+          <p>Cash on Delivery & Secure Cards</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Product Categories Explorer Grid (All 12 Categories)
+       ========================================================================= -->
+  <section class="categories-section container" id="categories-section">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <i class="fa-solid fa-layer-group section-title-icon"></i>
+        <h2 class="section-title">Explore Categories</h2>
+      </div>
+      <span class="section-link" style="cursor: pointer;" onclick="app.filterByCategory('All')">View All (12)</span>
+    </div>
+    
+    <div class="categories-grid" id="categories-grid-container">
+      <!-- Dynamically generated categories via JS -->
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. Today's Flash Deals Section (Countdown & Limited Stock)
+       ========================================================================= -->
+  <section class="deals-section container" id="deals-section">
+    <div class="deals-header">
+      <div class="deals-title-box">
+        <span class="deals-badge"><i class="fa-solid fa-bolt"></i> TODAY'S DEALS</span>
+        <h2 class="section-title" style="margin: 0; font-size: 1.35rem;">Limited-Time Flash Discounts</h2>
+      </div>
+      <div class="deals-countdown">
+        <i class="fa-regular fa-clock" style="color: var(--danger);"></i>
+        <span class="countdown-label">Ends in:</span>
+        <span class="countdown-timer" id="flash-countdown-timer">08:42:19</span>
+      </div>
+    </div>
+
+    <!-- Deals Cards Grid -->
+    <div class="deals-grid" id="deals-grid-container">
+      <!-- Populated via JS -->
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. Master Product Showcase with Advanced Filtering & Sorting
+       ========================================================================= -->
+  <main class="main-shop-section container" id="shop-section">
+    <div class="shop-layout">
+      
+      <!-- Left Column: Filter Sidebar -->
+      <aside class="filter-sidebar" id="filter-sidebar" aria-label="Product Filters">
+        <div class="filter-header">
+          <h3><i class="fa-solid fa-sliders"></i> Filters</h3>
+          <button class="clear-filters-btn" id="clear-all-filters-btn" title="Reset all applied filters">Reset All</button>
+        </div>
+
+        <!-- Filter 1: Categories -->
+        <div class="filter-group">
+          <div class="filter-group-title">
+            <span>Category</span>
+          </div>
+          <div class="filter-list" id="category-filter-list">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Filter 2: Price Range Filter -->
+        <div class="filter-group">
+          <div class="filter-group-title">
+            <span>Price Range (LKR)</span>
+          </div>
+          <div class="price-slider-wrap">
+            <input type="range" 
+                   id="price-range-slider" 
+                   class="price-slider-range" 
+                   min="5000" 
+                   max="750000" 
+                   step="5000" 
+                   value="750000" 
+                   aria-label="Price range filter">
+          </div>
+          <div class="price-range-inputs">
+            <div class="price-input-box">
+              <span>Rs.</span>
+              <input type="number" id="price-min-input" placeholder="Min" min="0" value="0">
+            </div>
+            <span style="color: #999;">-</span>
+            <div class="price-input-box">
+              <span>Rs.</span>
+              <input type="number" id="price-max-input" placeholder="Max" min="0" value="750000">
+            </div>
+            <button class="btn btn-sm btn-outline" id="apply-price-btn" style="padding: 6px 10px;">Go</button>
+          </div>
+        </div>
+
+        <!-- Filter 3: Customer Rating Filter -->
+        <div class="filter-group">
+          <div class="filter-group-title">
+            <span>Customer Rating</span>
+          </div>
+          <div class="filter-list">
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="rating-filter" value="4.8">
+                <span class="rating-stars">★★★★★</span> 4.8 & up
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="rating-filter" value="4.5">
+                <span class="rating-stars">★★★★☆</span> 4.5 & up
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="rating-filter" value="4.0">
+                <span class="rating-stars">★★★★☆</span> 4.0 & up
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="rating-filter" value="0" checked>
+                All Ratings
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter 4: Discount Filter -->
+        <div class="filter-group">
+          <div class="filter-group-title">
+            <span>Discount Offer</span>
+          </div>
+          <div class="filter-list">
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="discount-filter" value="20">
+                20% Off or more
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="discount-filter" value="15">
+                15% Off or more
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="discount-filter" value="10">
+                10% Off or more
+              </label>
+            </div>
+            <div class="filter-item">
+              <label>
+                <input type="radio" name="discount-filter" value="0" checked>
+                All Discounts
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter 5: Availability -->
+        <div class="filter-group">
+          <div class="filter-group-title">
+            <span>Availability</span>
+          </div>
+          <div class="filter-item">
+            <label>
+              <input type="checkbox" id="in-stock-only-checkbox">
+              In Stock Only
+            </label>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Right Column: Products Content -->
+      <section class="shop-main-content">
+        
+        <!-- Controls & Sorting Bar -->
+        <div class="shop-controls-bar">
+          <div class="results-info">
+            <span id="results-count-text">Showing <strong>36</strong> products</span>
+            <div class="active-filter-chips" id="active-filter-chips">
+              <!-- Active chips added via JS -->
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <button class="mobile-filter-btn" id="mobile-filter-drawer-btn">
+              <i class="fa-solid fa-filter"></i> Filters
+            </button>
+            <div class="sort-container">
+              <label for="product-sort-select" class="sort-label">Sort by:</label>
+              <select id="product-sort-select" class="sort-select">
+                <option value="featured">Featured / Recommended</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating-desc">Avg. Customer Review</option>
+                <option value="discount-desc">Biggest Discount (%)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Cards Grid -->
+        <div class="product-grid" id="products-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       8. Special Promo Banner & Discount Voucher Card
+       ========================================================================= -->
+  <section class="promo-banner-section container" aria-label="Special Discount Voucher">
+    <div class="promo-content">
+      <span class="badge badge-deal" style="margin-bottom: 8px;">WEEKEND SPECIAL</span>
+      <h3>Get Extra 10% Off Your Entire Order</h3>
+      <p>Apply coupon at checkout on any order over Rs. 20,000. Limited-time islandwide promotion!</p>
+    </div>
+    <div class="promo-code-box">
+      <div>
+        <span style="font-size: 0.72rem; color: #cbd5e1; text-transform: uppercase; display: block;">Coupon Code</span>
+        <span class="promo-code" id="coupon-code-text">YOONU10</span>
+      </div>
+      <button class="btn btn-sm btn-primary" id="copy-coupon-btn" title="Copy coupon code">
+        <i class="fa-regular fa-copy"></i> Copy
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. Customer Reviews & Social Proof Section
+       ========================================================================= -->
+  <section class="testimonials-section container" aria-label="Customer Reviews">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <i class="fa-solid fa-star-half-stroke section-title-icon"></i>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+      <span class="rating-stars" style="font-size: 1rem;">★★★★★ <strong style="color: var(--text-main); font-size: 0.9rem;">4.9 / 5 Overall Score</strong></span>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-user">
+          <div class="user-avatar-circle">KP</div>
+          <div class="user-details">
+            <h5>Kasun Perera</h5>
+            <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer (Colombo)</span>
+          </div>
+        </div>
+        <div class="rating-stars">★★★★★</div>
+        <p class="testimonial-text">"Ordered an Apple iPhone 15 Pro Max Natural Titanium. Delivered in under 36 hours to Colombo 03 in tamper-proof sealing with TRCSL approval. Outstanding service!"</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-user">
+          <div class="user-avatar-circle">NF</div>
+          <div class="user-details">
+            <h5>Nadeeka Fernando</h5>
+            <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer (Kandy)</span>
+          </div>
+        </div>
+        <div class="rating-stars">★★★★★</div>
+        <p class="testimonial-text">"The Philips XXL Airfryer and European linen shirts arrived in mint condition. The cash on delivery option made shopping 100% stress-free."</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-user">
+          <div class="user-avatar-circle">SW</div>
+          <div class="user-details">
+            <h5>Sahan Wickramasinghe</h5>
+            <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer (Galle)</span>
+          </div>
+        </div>
+        <div class="rating-stars">★★★★★</div>
+        <p class="testimonial-text">"Sony XM5 noise-cancelling headphones are authentic and sound phenomenal. The discount coupon saved me an extra 10,000 LKR. Highly recommended store!"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. Recently Viewed Products Section (Saved dynamically in localStorage)
+       ========================================================================= -->
+  <section class="recently-viewed-section container" id="recently-viewed-section" style="display: none;">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <i class="fa-solid fa-clock-rotate-left section-title-icon"></i>
+        <h2 class="section-title" style="font-size: 1.25rem;">Recently Viewed Products</h2>
+      </div>
+      <button class="clear-filters-btn" onclick="app.clearRecentlyViewed()">Clear History</button>
+    </div>
+    <div class="recently-viewed-grid" id="recently-viewed-grid">
+      <!-- Populated via JS -->
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. Newsletter Subscription Section
+       ========================================================================= -->
+  <section class="newsletter-section container" aria-label="Newsletter Subscription">
+    <div class="newsletter-content">
+      <i class="fa-regular fa-envelope-open newsletter-icon"></i>
+      <h3 class="newsletter-title">Subscribe to Yoonu Store Insiders</h3>
+      <p class="newsletter-desc">Be the first to hear about flash discounts, new smartphone drops, and exclusive voucher codes straight to your inbox.</p>
+      <form class="newsletter-form" id="newsletter-form" onsubmit="return false;">
+        <input type="email" id="newsletter-email-input" class="newsletter-input" placeholder="Enter your email address..." required>
+        <button type="submit" class="btn btn-primary" id="newsletter-submit-btn">
+          <span>Subscribe</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. Professional Footer
+       ========================================================================= -->
+  <footer class="site-footer" id="footer">
+    <!-- Back To Top Trigger -->
+    <button class="back-to-top-btn" id="back-to-top-btn">
+      <i class="fa-solid fa-chevron-up"></i> Back to top
+    </button>
+
+    <div class="container footer-nav-block">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Get to Know Us</h4>
+          <ul>
+            <li><a href="#" onclick="return false;">About Yoonu Store</a></li>
+            <li><a href="#" onclick="return false;">Careers & Culture</a></li>
+            <li><a href="#" onclick="return false;">Corporate Social Responsibility</a></li>
+            <li><a href="#" onclick="return false;">Press & Media Releases</a></li>
+            <li><a href="#" onclick="return false;">Yoonu Science & Tech</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Shop With Us</h4>
+          <ul>
+            <li><a href="#" onclick="app.openAccountModal(); return false;">Your Account</a></li>
+            <li><a href="#" onclick="app.openOrdersModal(); return false;">Your Orders & Tracking</a></li>
+            <li><a href="#" onclick="return false;">Shipping Rates & Policies</a></li>
+            <li><a href="#" onclick="return false;">Returns & Replacements</a></li>
+            <li><a href="#" onclick="app.openWishlistModal(); return false;">Manage Your Wishlist</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Make Money With Us</h4>
+          <ul>
+            <li><a href="#" onclick="return false;">Sell on Yoonu Marketplace</a></li>
+            <li><a href="#" onclick="return false;">Supply to Yoonu Store</a></li>
+            <li><a href="#" onclick="return false;">Become an Affiliate Partner</a></li>
+            <li><a href="#" onclick="return false;">Advertise Your Products</a></li>
+            <li><a href="#" onclick="return false;">Fulfillment by Yoonu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Help & Customer Care</h4>
+          <ul>
+            <li><a href="#" onclick="return false;">Help & Support Center</a></li>
+            <li><a href="#" onclick="return false;">Islandwide Delivery Tracking</a></li>
+            <li><a href="#" onclick="return false;">Payment Methods & Installments</a></li>
+            <li><a href="#" onclick="return false;">Warranty & Repair Services</a></li>
+            <li><a href="#" onclick="return false;">Report Suspicious Activity</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Legal & Payment Badges -->
+    <div class="container footer-bottom">
+      <div class="footer-payment-methods">
+        <i class="fa-brands fa-cc-visa" title="Visa"></i>
+        <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+        <i class="fa-brands fa-cc-amex" title="American Express"></i>
+        <i class="fa-solid fa-money-bill-wave" title="Cash on Delivery"></i>
+        <span style="font-size: 0.85rem; font-weight: 700; background: rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 4px;">KOKO 3x</span>
+        <span style="font-size: 0.85rem; font-weight: 700; background: rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 4px;">MINTPAY</span>
+      </div>
+      <p>&copy; 2026 Yoonu Store, Inc. or its affiliates. All rights reserved. Original modern e-commerce platform crafted with HTML5, CSS3 & JavaScript.</p>
+      <div class="footer-legal-links">
+        <a href="#" onclick="return false;">Conditions of Use</a>
+        <a href="#" onclick="return false;">Privacy Notice</a>
+        <a href="#" onclick="return false;">Consumer Health Data Privacy</a>
+        <a href="#" onclick="return false;">Your Ads Privacy Choices</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       13. Slide-Over Shopping Cart Drawer
+       ========================================================================= -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <h3>
+        <i class="fa-solid fa-cart-shopping"></i> Shopping Cart 
+        <span style="font-size: 0.85rem; font-weight: 500; color: #cbd5e1;" id="drawer-item-count-text">(0 items)</span>
+      </h3>
+      <i class="fa-solid fa-xmark drawer-close-btn" id="cart-drawer-close-btn" title="Close Cart"></i>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="free-shipping-progress-box">
+      <div class="progress-text">
+        <span id="shipping-progress-label">Add Rs. 15,000 for FREE Delivery</span>
+        <strong id="shipping-progress-percent">0%</strong>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="shipping-progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Drawer Items List -->
+    <div class="drawer-body" id="drawer-items-list">
+      <!-- Populated via JS -->
+    </div>
+
+    <!-- Drawer Footer & Checkout -->
+    <div class="drawer-footer" id="drawer-footer">
+      <div class="cart-coupon-box">
+        <input type="text" class="cart-coupon-input" id="cart-coupon-input" placeholder="Promo code (e.g. YOONU10)">
+        <button class="btn btn-sm btn-dark" id="apply-coupon-btn">Apply</button>
+      </div>
+
+      <div class="cart-breakdown-row">
+        <span>Subtotal</span>
+        <span id="cart-drawer-subtotal">Rs. 0</span>
+      </div>
+      <div class="cart-breakdown-row">
+        <span>Estimated Delivery</span>
+        <span id="cart-drawer-shipping">Rs. 0</span>
+      </div>
+      <div class="cart-breakdown-row" id="cart-drawer-discount-row" style="display: none; color: var(--success);">
+        <span>Discount Voucher</span>
+        <span id="cart-drawer-discount">-Rs. 0</span>
+      </div>
+      <div class="cart-breakdown-row total-row">
+        <span>Total (LKR)</span>
+        <span id="cart-drawer-total">Rs. 0</span>
+      </div>
+
+      <button class="btn btn-primary btn-block drawer-checkout-btn" id="drawer-checkout-btn">
+        <i class="fa-solid fa-lock"></i> Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       14. Product Details Modal (PDP)
+       ========================================================================= -->
+  <div class="modal-overlay" id="pdp-modal-overlay">
+    <div class="modal-content modal-product-details" id="pdp-modal-content">
+      <button class="modal-close-btn" id="pdp-modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="pdp-grid" id="pdp-details-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       15. Wishlist Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="wishlist-modal-overlay">
+    <div class="modal-content" style="max-width: 650px; padding: 28px;">
+      <button class="modal-close-btn" id="wishlist-modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid var(--border-light); padding-bottom: 14px;">
+        <h3 style="font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-heart" style="color: #e11d48;"></i> Your Saved Wishlist
+        </h3>
+        <button class="btn btn-sm btn-outline" id="move-all-wishlist-btn">Move All to Cart</button>
+      </div>
+      <div id="wishlist-modal-items" style="display: flex; flex-direction: column; gap: 14px; max-height: 480px; overflow-y: auto;">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       16. User Authentication Modal (Sign In / Register)
+       ========================================================================= -->
+  <div class="modal-overlay" id="auth-modal-overlay">
+    <div class="modal-content modal-auth">
+      <button class="modal-close-btn" id="auth-modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="auth-header">
+        <div class="brand-icon-wrapper" style="margin: 0 auto 10px; width: 44px; height: 44px; font-size: 1.35rem;">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <h3 style="font-size: 1.4rem; font-weight: 800;">Welcome to Yoonu Store</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Sign in to access your orders, wishlist, and fast checkout</p>
+      </div>
+
+      <div class="auth-tabs">
+        <div class="auth-tab-btn active" id="tab-btn-login" onclick="app.switchAuthTab('login')">Sign In</div>
+        <div class="auth-tab-btn" id="tab-btn-register" onclick="app.switchAuthTab('register')">Create Account</div>
+      </div>
+
+      <!-- Sign In Form -->
+      <form class="auth-form" id="login-form" onsubmit="return false;">
+        <div class="form-field">
+          <label for="login-email">Email or Phone Number</label>
+          <input type="email" id="login-email" class="form-input" placeholder="e.g. kasun@example.com" required>
+          <span class="form-error-msg" id="login-email-error">Please enter a valid email address</span>
+        </div>
+        <div class="form-field">
+          <div style="display: flex; justify-content: space-between;">
+            <label for="login-password">Password</label>
+            <a href="#" style="font-size: 0.78rem;" onclick="return false;">Forgot password?</a>
+          </div>
+          <input type="password" id="login-password" class="form-input" placeholder="Enter your password" required>
+          <span class="form-error-msg" id="login-password-error">Password must be at least 6 characters</span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="login-submit-btn">
+          Sign In
+        </button>
+      </form>
+
+      <!-- Register Form -->
+      <form class="auth-form" id="register-form" style="display: none;" onsubmit="return false;">
+        <div class="form-field">
+          <label for="register-name">Full Name</label>
+          <input type="text" id="register-name" class="form-input" placeholder="e.g. Kasun Perera" required>
+        </div>
+        <div class="form-field">
+          <label for="register-email">Email Address</label>
+          <input type="email" id="register-email" class="form-input" placeholder="name@domain.com" required>
+        </div>
+        <div class="form-field">
+          <label for="register-phone">Mobile Phone (Sri Lanka)</label>
+          <input type="tel" id="register-phone" class="form-input" placeholder="+94 77 123 4567" required>
+        </div>
+        <div class="form-field">
+          <label for="register-password">Password (at least 6 characters)</label>
+          <input type="password" id="register-password" class="form-input" placeholder="Create a password" required>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-block" id="register-submit-btn">
+          Create Yoonu Account
+        </button>
+      </form>
+
+      <!-- Architecture Callout -->
+      <div class="architecture-notice-box">
+        <strong><i class="fa-solid fa-shield"></i> Production Security Architecture:</strong>
+        <p>In a production deployment, credentials are encrypted using bcrypt and verified via Node.js/Express with JSON Web Tokens (JWT) stored in HTTP-only secure cookies.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       17. User Profile & Order History Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="orders-modal-overlay">
+    <div class="modal-content" style="max-width: 850px; padding: 28px;">
+      <button class="modal-close-btn" id="orders-modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-light); flex-wrap: wrap; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="user-avatar-circle" id="profile-avatar-initials" style="width: 50px; height: 50px; font-size: 1.25rem;">KP</div>
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 800;" id="profile-display-name">Kasun Perera</h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted);" id="profile-display-email">kasun.p@gmail.com</p>
+          </div>
+        </div>
+        <button class="btn btn-sm btn-outline" id="sign-out-btn" onclick="app.signOutUser()">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+        </button>
+      </div>
+
+      <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-box-archive" style="color: var(--accent-gold);"></i> Past Order History
+      </h4>
+
+      <div id="order-history-list" style="display: flex; flex-direction: column; gap: 16px; max-height: 440px; overflow-y: auto;">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       18. Checkout Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="checkout-modal-overlay">
+    <div class="modal-content modal-checkout" id="checkout-modal-content">
+      <button class="modal-close-btn" id="checkout-modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-shield-halved" style="color: var(--success);"></i> Secure Express Checkout
+      </h2>
+
+      <div class="checkout-grid">
+        <!-- Left: Form Steps -->
+        <div class="checkout-steps-wrapper">
+          
+          <!-- Step 1: Customer & Address Information -->
+          <div class="checkout-step-card">
+            <div class="step-card-header">
+              <span class="step-number">1</span>
+              <span>Delivery Details (Sri Lanka)</span>
+            </div>
+            <form id="checkout-shipping-form" onsubmit="return false;" class="auth-form">
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label for="checkout-name">Recipient Full Name</label>
+                  <input type="text" id="checkout-name" class="form-input" value="Kasun Perera" required>
+                </div>
+                <div class="form-field">
+                  <label for="checkout-phone">Mobile Phone (for delivery SMS)</label>
+                  <input type="tel" id="checkout-phone" class="form-input" value="+94 77 123 4567" required>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="checkout-address">Street Address / Landmark</label>
+                <input type="text" id="checkout-address" class="form-input" value="No. 42/B, Galle Road" required>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label for="checkout-city">City / Town</label>
+                  <input type="text" id="checkout-city" class="form-input" value="Colombo 03" required>
+                </div>
+                <div class="form-field">
+                  <label for="checkout-postal">Postal Code</label>
+                  <input type="text" id="checkout-postal" class="form-input" value="00300" required>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Step 2: Payment Method Selection -->
+          <div class="checkout-step-card">
+            <div class="step-card-header">
+              <span class="step-number">2</span>
+              <span>Select Payment Method</span>
+            </div>
+            
+            <div class="payment-method-selector">
+              <label class="payment-method-option active" id="opt-cod">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <input type="radio" name="payment-method" value="Cash on Delivery" checked>
+                  <div>
+                    <strong>Cash on Delivery (COD)</strong>
+                    <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Pay with cash or card upon doorstep arrival.</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-money-bill-wave" style="font-size: 1.3rem; color: var(--success);"></i>
+              </label>
+
+              <label class="payment-method-option" id="opt-online">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <input type="radio" name="payment-method" value="Online Card Payment">
+                  <div>
+                    <strong>Credit / Debit Card Online</strong>
+                    <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Visa, Mastercard, Amex via 256-bit SSL gateway.</p>
+                  </div>
+                </div>
+                <div style="font-size: 1.3rem; color: #1e3a8a;">
+                  <i class="fa-brands fa-cc-visa"></i>
+                  <i class="fa-brands fa-cc-mastercard"></i>
+                </div>
+              </label>
+
+              <label class="payment-method-option" id="opt-koko">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <input type="radio" name="payment-method" value="Koko 3x Installments">
+                  <div>
+                    <strong>Koko / Mintpay (3 Interest-Free Installments)</strong>
+                    <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0;">Split your total into 3 equal monthly payments.</p>
+                  </div>
+                </div>
+                <span class="badge badge-deal" style="font-size: 0.7rem;">0% APR</span>
+              </label>
+            </div>
+
+            <!-- Card simulation input box if Online Card selected -->
+            <div id="card-fields-box" style="display: none; margin-top: 14px; padding: 14px; background-color: var(--bg-subtle); border-radius: var(--radius-md);">
+              <div class="form-field" style="margin-bottom: 8px;">
+                <label>Card Number</label>
+                <input type="text" class="form-input" placeholder="4111 2222 3333 4444" maxlength="19">
+              </div>
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label>Expiry Date</label>
+                  <input type="text" class="form-input" placeholder="MM/YY" maxlength="5">
+                </div>
+                <div class="form-field">
+                  <label>Security Code (CVV)</label>
+                  <input type="password" class="form-input" placeholder="123" maxlength="3">
+                </div>
+              </div>
+              <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 6px;">
+                <i class="fa-solid fa-info-circle"></i> Demonstration UI: Production uses integrated PayHere / Stripe gateway tokens.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right: Order Summary Sticky Card -->
+        <div>
+          <div class="checkout-summary-card">
+            <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 14px;">Order Summary</h4>
+            <div class="checkout-items-preview" id="checkout-items-preview">
+              <!-- Populated via JS -->
+            </div>
+
+            <div class="cart-breakdown-row">
+              <span>Items Subtotal</span>
+              <span id="checkout-subtotal">Rs. 0</span>
+            </div>
+            <div class="cart-breakdown-row">
+              <span>Islandwide Delivery</span>
+              <span id="checkout-shipping">Rs. 0</span>
+            </div>
+            <div class="cart-breakdown-row" id="checkout-discount-row" style="display: none; color: var(--success);">
+              <span>Voucher Savings</span>
+              <span id="checkout-discount">-Rs. 0</span>
+            </div>
+            <div class="cart-breakdown-row total-row">
+              <span>Final Total (LKR)</span>
+              <span id="checkout-total">Rs. 0</span>
+            </div>
+
+            <button class="btn btn-secondary btn-block" id="place-order-btn" style="margin-top: 18px; padding: 12px; font-size: 1rem;">
+              <i class="fa-solid fa-lock"></i> Place Order Now
+            </button>
+            <p style="font-size: 0.72rem; color: var(--text-muted); text-align: center; margin-top: 8px;">
+              By placing your order, you agree to Yoonu Store's Terms of Sale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       19. Order Confirmation Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="order-confirmed-overlay">
+    <div class="modal-content" style="max-width: 580px; padding: 36px 28px;">
+      <div class="order-confirmed-box">
+        <div class="confirm-success-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 6px;">Thank You! Your Order is Confirmed</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">We've sent an SMS confirmation to your phone. Your order is being packed at our Colombo fulfillment warehouse.</p>
+        
+        <div class="order-id-badge" id="confirmed-order-id">YS-2026-0000</div>
+        
+        <div style="background-color: var(--bg-subtle); border-radius: var(--radius-md); padding: 16px; text-align: left; margin-bottom: 24px; font-size: 0.88rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: var(--text-muted);">Estimated Delivery:</span>
+            <strong>Within 48 Hours</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: var(--text-muted);">Payment Method:</span>
+            <strong id="confirmed-payment-method">Cash on Delivery</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">Total Amount Paid:</span>
+            <strong id="confirmed-total-amount" style="color: var(--danger);">Rs. 0</strong>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> Print Receipt
+          </button>
+          <button class="btn btn-outline" onclick="app.closeOrderConfirmedModal()">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       20. Administrative Dashboard Modal (CRUD & Management Portal)
+       ========================================================================= -->
+  <div class="modal-overlay" id="admin-modal-overlay">
+    <div class="modal-content modal-admin">
+      <button class="modal-close-btn" id="admin-modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="admin-header">
+        <div>
+          <h2 style="font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-chart-line" style="color: var(--accent-gold);"></i> Yoonu Store Admin Center
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Storefront Management, Orders, Catalog CRUD & Real-Time Analytics</p>
+        </div>
+        <button class="btn btn-primary btn-sm" id="admin-add-product-btn" onclick="app.openAddProductModal()">
+          <i class="fa-solid fa-plus"></i> Add New Product
+        </button>
+      </div>
+
+      <!-- Key Performance Indicators (KPIs) -->
+      <div class="admin-stats-grid">
+        <div class="admin-stat-card">
+          <div class="stat-icon revenue"><i class="fa-solid fa-coins"></i></div>
+          <div class="stat-info">
+            <h5>Total Revenue</h5>
+            <p id="admin-total-revenue">Rs. 0</p>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="stat-icon orders"><i class="fa-solid fa-boxes-packing"></i></div>
+          <div class="stat-info">
+            <h5>Total Orders</h5>
+            <p id="admin-total-orders">0</p>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="stat-icon products"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <div class="stat-info">
+            <h5>Catalog Size</h5>
+            <p id="admin-total-products">0</p>
+          </div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="stat-icon customers"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-info">
+            <h5>Active Customers</h5>
+            <p id="admin-total-customers">1,420</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin Tabs -->
+      <div class="admin-tabs">
+        <div class="admin-tab active" id="admin-tab-products" onclick="app.switchAdminTab('products')">Product Catalog (<span id="admin-tab-product-count">0</span>)</div>
+        <div class="admin-tab" id="admin-tab-orders" onclick="app.switchAdminTab('orders')">Orders Management (<span id="admin-tab-orders-count">0</span>)</div>
+        <div class="admin-tab" id="admin-tab-architecture" onclick="app.switchAdminTab('architecture')">Backend & Architecture Guide</div>
+      </div>
+
+      <!-- Tab 1: Products Table -->
+      <div id="admin-view-products">
+        <div class="admin-table-wrapper">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Price (LKR)</th>
+                <th>Stock</th>
+                <th>Rating</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-products-table-body">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 2: Orders Table -->
+      <div id="admin-view-orders" style="display: none;">
+        <div class="admin-table-wrapper">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Total (LKR)</th>
+                <th>Status</th>
+                <th>Update Status</th>
+              </tr>
+            </thead>
+            <tbody id="admin-orders-table-body">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 3: Architecture Guide -->
+      <div id="admin-view-architecture" style="display: none;">
+        <div style="background-color: var(--bg-subtle); padding: 24px; border-radius: var(--radius-lg); font-size: 0.9rem; line-height: 1.6;">
+          <h4 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; color: var(--primary-900);">
+            <i class="fa-solid fa-server"></i> Production Enterprise Stack Roadmap
+          </h4>
+          <p>This frontend demonstration is crafted with pure HTML5, CSS3, and JavaScript, backed by <code>localStorage</code> for state persistence. When deploying Yoonu Store as a commercial enterprise platform, implement this recommended architecture:</p>
+          <ul style="list-style: disc; padding-left: 20px; margin: 14px 0;">
+            <li><strong>Backend API:</strong> Node.js with Express.js / NestJS or Go microservices handling REST & GraphQL endpoints.</li>
+            <li><strong>Database:</strong> PostgreSQL with Prisma ORM for relational integrity (Users, Orders, Transactions) and Redis for sub-millisecond cart sessions & caching.</li>
+            <li><strong>Authentication:</strong> OAuth2.0 / JWT tokens with bcrypt salt hashing, CSRF prevention, and rate limiting.</li>
+            <li><strong>Payment Gateways:</strong> PayHere Sri Lanka (Visa/Mastercard/Amex/eZ Cash), Stripe, and Buy-Now-Pay-Later (Koko/Mintpay) webhooks.</li>
+            <li><strong>Cloud & Media:</strong> AWS S3 / Cloudinary for WebP product image CDN and Cloudflare Edge for DDoS defense.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Add/Edit Product Modal -->
+  <div class="modal-overlay" id="product-form-modal-overlay">
+    <div class="modal-content" style="max-width: 550px; padding: 28px;">
+      <button class="modal-close-btn" id="product-form-modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 16px;" id="product-form-title">Add New Product</h3>
+      <form id="admin-product-form" onsubmit="return false;" class="auth-form">
+        <input type="hidden" id="edit-product-id">
+        <div class="form-field">
+          <label for="prod-name">Product Name</label>
+          <input type="text" id="prod-name" class="form-input" required>
+        </div>
+        <div class="form-row-2">
+          <div class="form-field">
+            <label for="prod-category">Category</label>
+            <select id="prod-category" class="form-input">
+              <option value="Smartphones">Smartphones</option>
+              <option value="Computers & Laptops">Computers & Laptops</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Men’s Fashion">Men’s Fashion</option>
+              <option value="Women’s Fashion">Women’s Fashion</option>
+              <option value="Shoes">Shoes</option>
+              <option value="Watches">Watches</option>
+              <option value="Home & Kitchen">Home & Kitchen</option>
+              <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+              <option value="Sports & Fitness">Sports & Fitness</option>
+              <option value="Gaming Accessories">Gaming Accessories</option>
+              <option value="Baby Products">Baby Products</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="prod-brand">Brand</label>
+            <input type="text" id="prod-brand" class="form-input" required>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-field">
+            <label for="prod-price">Current Price (LKR)</label>
+            <input type="number" id="prod-price" class="form-input" min="100" required>
+          </div>
+          <div class="form-field">
+            <label for="prod-orig-price">Original Price (LKR)</label>
+            <input type="number" id="prod-orig-price" class="form-input" min="100" required>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-field">
+            <label for="prod-stock">Stock Quantity</label>
+            <input type="number" id="prod-stock" class="form-input" min="1" value="10" required>
+          </div>
+          <div class="form-field">
+            <label for="prod-badge">Badge (Optional)</label>
+            <input type="text" id="prod-badge" class="form-input" placeholder="e.g. Best Seller">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="prod-image">Image URL</label>
+          <input type="url" id="prod-image" class="form-input" placeholder="https://..." required>
+        </div>
+        <div class="form-field">
+          <label for="prod-desc">Description</label>
+          <textarea id="prod-desc" class="form-input" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="save-product-submit-btn">Save Product</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       21. Floating Toast Notifications Container
+       ========================================================================= -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- =========================================================================
+       22. Mobile Bottom Navigation Bar
+       ========================================================================= -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <div class="mobile-nav-item active" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </div>
+    <div class="mobile-nav-item" onclick="app.toggleMobileFilterDrawer()">
+      <i class="fa-solid fa-filter"></i>
+      <span>Filter</span>
+    </div>
+    <div class="mobile-nav-item" onclick="app.openWishlistModal()">
+      <i class="fa-regular fa-heart"></i>
+      <span>Saved</span>
+    </div>
+    <div class="mobile-nav-item" onclick="app.openCartDrawer()">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span>Cart</span>
+    </div>
+    <div class="mobile-nav-item" onclick="app.openAccountModal()">
+      <i class="fa-regular fa-user"></i>
+      <span>Account</span>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       23. Core JavaScript Logic
+       ========================================================================= -->
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
