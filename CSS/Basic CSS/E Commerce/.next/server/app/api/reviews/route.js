@@ -1,0 +1,16 @@
+"use strict";(()=>{var e={};e.id=186,e.ids=[186],e.modules={5890:e=>{e.exports=require("better-sqlite3")},399:e=>{e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},517:e=>{e.exports=require("next/dist/compiled/next-server/app-route.runtime.prod.js")},8893:e=>{e.exports=require("buffer")},4770:e=>{e.exports=require("crypto")},2048:e=>{e.exports=require("fs")},5315:e=>{e.exports=require("path")},6162:e=>{e.exports=require("stream")},1764:e=>{e.exports=require("util")},9282:(e,r,t)=>{t.r(r),t.d(r,{originalPathname:()=>g,patchFetch:()=>w,requestAsyncStorage:()=>l,routeModule:()=>m,serverHooks:()=>x,staticGenerationAsyncStorage:()=>v});var s={};t.r(s),t.d(s,{GET:()=>c,POST:()=>d});var i=t(9303),a=t(8716),o=t(670),n=t(7070),u=t(5748),p=t(5456);async function c(e){try{let{searchParams:r}=new URL(e.url),t=r.get("productId");if(!t)return n.NextResponse.json({error:"productId query param is required"},{status:400});let s=u.Z.prepare(`
+      SELECT * FROM reviews 
+      WHERE product_id = ? 
+      ORDER BY created_at DESC
+    `).all(t).map(e=>({id:e.id,productId:e.product_id,userName:e.user_name,rating:Number(e.rating),comment:e.comment,createdAt:e.created_at}));return n.NextResponse.json({reviews:s})}catch(e){return console.error("Fetch reviews error:",e),n.NextResponse.json({error:"Failed to fetch reviews"},{status:500})}}async function d(e){try{let{productId:r,rating:t,comment:s,userName:i}=await e.json();if(!r||!t||!s)return n.NextResponse.json({error:"Product ID, rating, and comment are required"},{status:400});let a=(0,p.Ge)(e),o=a?a.name:i?.trim()||"Verified Buyer",c=`rev-${Date.now()}`,d=new Date().toISOString();u.Z.prepare(`
+      INSERT INTO reviews (id, product_id, user_name, rating, comment, created_at)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `).run(c,r,o,Math.min(5,Math.max(1,Number(t))),s.trim(),d);let m=u.Z.prepare(`
+      SELECT AVG(rating) as avg_rating, COUNT(*) as count 
+      FROM reviews 
+      WHERE product_id = ?
+    `).get(r);if(m){let e=Math.round(10*m.avg_rating)/10;u.Z.prepare(`
+        UPDATE products 
+        SET rating = ?, review_count = ? 
+        WHERE id = ?
+      `).run(e,m.count,r)}return n.NextResponse.json({message:"Review submitted successfully",review:{id:c,productId:r,userName:o,rating:Number(t),comment:s,createdAt:d}},{status:201})}catch(e){return console.error("Create review error:",e),n.NextResponse.json({error:"Failed to submit review"},{status:500})}}let m=new i.AppRouteRouteModule({definition:{kind:a.x.APP_ROUTE,page:"/api/reviews/route",pathname:"/api/reviews",filename:"route",bundlePath:"app/api/reviews/route"},resolvedPagePath:"C:\\Users\\G15\\Desktop\\Github\\Git\\My-Practice\\CSS\\Basic CSS\\E Commerce\\src\\app\\api\\reviews\\route.ts",nextConfigOutput:"",userland:s}),{requestAsyncStorage:l,staticGenerationAsyncStorage:v,serverHooks:x}=m,g="/api/reviews/route";function w(){return(0,o.patchFetch)({serverHooks:x,staticGenerationAsyncStorage:v})}}};var r=require("../../../webpack-runtime.js");r.C(e);var t=e=>r(r.s=e),s=r.X(0,[276,86,972,748],()=>t(9282));module.exports=s})();
