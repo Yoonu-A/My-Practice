@@ -2,6 +2,9 @@ import express from "express";
 
 const app = express();
 
+app.use(express.json());
+
+
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
@@ -39,21 +42,113 @@ app.get("/api/students",(req,res) =>
     });
 });
 
+
 let students=[
     {id:1,name:"raja",age:20,course:"SE"},
-    {id:2,name:"kumar",age:22,course:"IT"}
+    {id:2,name:"kumar",age:22,course:"IT"},
+    {id:3,name:"kamal",age:22,course:"IT"}
 ];
 
-//Get
-app.get("/students-demo",(req,res)=>
+//GET
+app.get("/students-demo",(req,res) =>
 {
     res.status(200).json(students);
-}
-);
+});
 
 
+app.get("/students-demo/:id", (req, res) => {
+    const id = Number(req.params.id);
 
+    const student = students.find((s) => s.id === id);
 
+    if (!student) {
+        return res.status(404).json({
+            message: "Student not found"
+        });
+    }
+
+    res.status(200).json(student);
+});
+
+//POST
+ app.post("/students-demo",(req,res) =>
+ {
+     const newstudent=req.body;
+
+     students.push(newstudent);
+
+    res.status(201).json(
+        {message:"students added",
+          student:newstudent   
+         }
+     );
+ });
+
+ //Patch
+ // PATCH - Update particular student details
+
+app.patch("/students-demo/:id", (req, res) => {
+
+    const id = Number(req.params.id);
+
+    const student = students.find((s) => s.id === id);
+
+    if (!student) {
+        return res.status(404).json({
+            message: "Student not found"
+        });
+    }
+
+    Object.assign(student, req.body);
+
+    res.status(200).json({
+        message: "Student updated successfully",
+        student: student
+    });
+
+});
+//PUT
+app.put("/students-demo/:id",(req,res) =>
+{
+    const id=Number(req.params.id);
+    const index=students.findIndex((s)=> s.id===id);
+
+    if(index===-1){
+        return res.status(404).json(
+            {
+                message:"student not found"
+            }
+        );
+    }
+    students[index]={id,...req.body};
+
+    res.status(200).json({
+        message:"student replaced successfully",
+        student:students[index]
+    });
+
+});
+
+//delete
+app.delete("/students-demo/:id",(req,res) =>
+{
+    const id=Number(req.params.id);
+    const index=students.findIndex((s)=> s.id===id);
+
+    if(index===-1){
+        return res.status(404).json(
+            {
+                message:"student not found"
+            }
+        );
+    }
+    students.splice(index,1);
+
+    res.status(200).json({
+        message:"student deleted successfully",
+    });
+
+});
 
 app.listen(3000, () => {
     console.log("server running");
