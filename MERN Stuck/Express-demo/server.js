@@ -1,21 +1,24 @@
 import express from "express";
+import morgan from "morgan";
 
 import studentRoutes from "./Routes/studentroute.js";
 
 const app = express();
 
+
 // Middleware
 app.use(express.json());
-
+app.use(morgan("dev"));
 
 //custom middleware
-const mymiddleware=(req,res,next)=>
-{
-    console.log("Middleware is Working");
-    next();
-};
-
-app.use(mymiddleware);
+const logger = (req, res, next) =>
+     {
+        console.log("Request Method:", req.method);
+        console.log("Request URL:", req.url);
+        console.log("Request Time:", new Date().toLocaleString());
+        next();
+     }
+app.use(logger);
 
 // Student API routes
 app.use("/api/students", studentRoutes);
