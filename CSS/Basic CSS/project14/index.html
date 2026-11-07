@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOC Flex Online Banking - Fund Transfer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .receipt-container {
+            background-color: #fff;
+            width: 100%;
+            max-width: 600px;
+            padding: 40px 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        .header {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: baseline;
+        }
+        .logo-boc {
+            font-size: 24px;
+            font-weight: 900;
+            color: #b59410;
+            margin-right: 6px;
+            letter-spacing: -0.5px;
+        }
+        .logo-flex {
+            font-size: 38px;
+            font-weight: bold;
+            color: #0b3254;
+            margin-right: 12px;
+        }
+        .logo-online {
+            font-size: 38px;
+            font-weight: bold;
+            color: #000;
+        }
+        .divider {
+            border-top: 2px solid #000;
+            margin: 15px 0 20px 0;
+        }
+        .title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .row-divider {
+            border-top: 1px solid #000;
+            margin-bottom: 15px;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .data-table td {
+            padding: 5px 0;
+            font-size: 14px;
+            vertical-align: top;
+            color: #000;
+        }
+        .label {
+            width: 40%;
+        }
+        .colon {
+            width: 5%;
+            text-align: center;
+        }
+        .value {
+            width: 55%;
+            font-weight: 500;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 11px;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #ccc;
+            padding-top: 15px;
+            line-height: 1.4;
+        }
+        .footer-left p {
+            margin: 2px 0;
+        }
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .contact-details p {
+            margin: 2px 0;
+            text-align: left;
+        }
+        /* 1975 Logo Design */
+        .boc-1975-logo {
+            width: 45px;
+            height: 45px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 13px;
+            color: #000;
+            border: 2px solid #000;
+            box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .boc-1975-logo::after {
+            content: '';
+            position: absolute;
+            width: 52px;
+            height: 52px;
+            border-left: 2px solid #000;
+            border-bottom: 2px solid #000;
+            border-radius: 50%;
+            top: -6px;
+            left: -6px;
+            transform: rotate(-30deg);
+        }
+
+        /* Print Media Styles */
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .receipt-container {
+                box-shadow: none;
+                max-width: 100%;
+                padding: 20px;
+            }
+            .boc-1975-logo {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="receipt-container">
+    <!-- Header -->
+    <div class="header">
+        <span class="logo-boc">BOC</span>
+        <span class="logo-flex">Flex</span>
+        <span class="logo-online">Online Banking</span>
+    </div>
+    
+    <div class="divider"></div>
+    <div class="title">Fund Transfer</div>
+
+    <!-- Transaction Details -->
+    <div class="section-title">Transaction Details</div>
+    <div class="row-divider"></div>
+    <table class="data-table">
+        <tr>
+            <td class="label">Transaction Amount</td>
+            <td class="colon">:</td>
+            <td class="value">LKR 2,400.00</td>
+        </tr>
+        <tr>
+            <td class="label">Transaction Date & Time</td>
+            <td class="colon">:</td>
+            <td class="value">08-10-2026 11:52 PM</td>
+        </tr>
+        <tr>
+            <td class="label">Transaction ID</td>
+            <td class="colon">:</td>
+            <td class="value">FX10839252300000</td>
+        </tr>
+        <tr>
+            <td class="label">Charges & Fee</td>
+            <td class="colon">:</td>
+            <td class="value">LKR 0.00</td>
+        </tr>
+        <tr>
+            <td class="label">Remarks</td>
+            <td class="colon">:</td>
+            <td class="value">Safni</td>
+        </tr>
+        <tr>
+            <td class="label">Transaction Status</td>
+            <td class="colon">:</td>
+            <td class="value" style="font-weight: bold;">SUCCESS</td>
+        </tr>
+    </table>
+
+    <!-- Sender Details -->
+    <div class="section-title">Sender A/C Details</div>
+    <div class="row-divider"></div>
+    <table class="data-table">
+        <tr>
+            <td class="label">Account Number</td>
+            <td class="colon">:</td>
+            <td class="value">**8686</td>
+        </tr>
+        <tr>
+            <td class="label">Sender's Name</td>
+            <td class="colon">:</td>
+            <td class="value">MR K M ILHAM</td>
+        </tr>
+        <tr>
+            <td class="label">Sender's Bank</td>
+            <td class="colon">:</td>
+            <td class="value">Bank of Ceylon</td>
+        </tr>
+    </table>
+
+    <!-- Beneficiary Details -->
+    <div class="section-title">Beneficiary A/C Details</div>
+    <div class="row-divider"></div>
+    <table class="data-table">
+        <tr>
+            <td class="label">Account No</td>
+            <td class="colon">:</td>
+            <td class="value">0096226643</td>
+        </tr>
+        <tr>
+            <td class="label">Beneficiary Name</td>
+            <td class="colon">:</td>
+            <td class="value">SHEHA HANAN MJ</td>
+        </tr>
+        <tr>
+            <td class="label">Beneficiary Bank</td>
+            <td class="colon">:</td>
+            <td class="value">Bank of Ceylon</td>
+        </tr>
+    </table>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-left">
+            <p>This is a computer-generated document. No signature is required.</p>
+            <p>Printed on: 08-10-2026 11:52 PM</p>
+            <p style="color: #555;">Print if necessary only.</p>
+        </div>
+        <div class="footer-right">
+            <div class="contact-details">
+                <p><strong>Inquiries:</strong></p>
+                <p>📞 011-2204444</p>
+                <p>✉️ info@boc.lk</p>
+            </div>
+            <!-- 1975 Badge -->
+            <div class="boc-1975-logo">1975</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
