@@ -1,4 +1,5 @@
 import express from "express";
+import validatestudent from "../middleware/validatestudent.js";
 
 import {
     getStudents,
@@ -17,7 +18,8 @@ router.get("/", getStudents);
 router.get("/:id", getStudentById);
 
 // POST student
-router.post("/", createStudent);
+router.post("/", validatestudent, createStudent);
+
 
 // PATCH student
 router.patch("/:id", updateStudent);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First EJS Page</title>
+</head>
+<body>
+    <h1> Student Information</h1>
+    <p>name: <%= name %></p>
+    <p>age: <%= age %></p>
+    <p>course: <%= course %></p>
+    
+ <%if(age>=18) {%>
+    <p>Status: Adult</p>
+
+    <%
+ }
+ else{%>
+    <p>Status:Not Adult</p>
+<%
+}
+%>
+
+</body>
+</html>
