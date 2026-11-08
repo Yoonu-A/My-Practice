@@ -10,7 +10,7 @@ export const getStudents = (req, res) => {
 };
 
 // GET student by ID
-export const getStudentById = (req, res) => {
+/*export const getStudentById = (req, res) => {
     const id = Number(req.params.id);
 
     const student = students.find((s) => s.id === id);
@@ -19,6 +19,23 @@ export const getStudentById = (req, res) => {
         return res.status(404).json({
             message: "Student not found"
         });
+    }
+
+    res.status(200).json(student);
+};*/
+export const getStudentById = (req, res, next) => {
+
+    const id = Number(req.params.id);
+
+    const student = students.find((s) => s.id === id);
+
+    if (!student) {
+
+        const error = new Error("Student not found");
+
+        error.status = 404;
+
+        return next(error);
     }
 
     res.status(200).json(student);
