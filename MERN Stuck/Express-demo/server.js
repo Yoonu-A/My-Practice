@@ -11,6 +11,7 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(errorhandler);
+app.use(express.static("public")); // Serve static files from the "public" directory
 
 //custom middleware
 const logger = (req, res, next) =>
@@ -42,10 +43,28 @@ app.get("/studentview", (req,res)=>
 app.get("/wellcome", (req,res)=>
 {
     res.render ("wellcome", 
-        { name: "John Doe",
+        { title: "Welcome Page",
+            name: "John Doe",
           course: "Computer Science" });
 });
 
+//student page ejs
+app.get("/student-page", (req,res)=>
+{
+    const students = [
+        {id: 1, name: "John Doe", age: 18, course: "Computer Science"},
+        {id: 2, name: "Jane Smith", age: 16, course: "Mathematics"},
+        {id: 3, name: "Michael Johnson", age: 18, course: "Physics"},
+    ];
+    res.render("student", { students: students });
+});
+
+//about page ejs
+app.get("/about", (req,res)=>
+{
+    res.render("about", { title: "About Us" });
+
+});
 
 
 
