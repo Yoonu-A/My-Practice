@@ -1,0 +1,22 @@
+<%- include('Partials/header') %>
+
+    <h1> Student Register</h1>
+    <form action="/register" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="MERN">MERN</option>
+            <option value="MEAN">full Stack</option>
+            <option value="Python">Python</option>
+        </select><br><br>
+
+
+        <button type="submit">Register</button>
+    </form>
+    <%- include('Partials/footer') %>
